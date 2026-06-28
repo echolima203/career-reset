@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Reset — Max's Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#F4EFE6;--paper:#FBF8F2;--green:#5C7355;--green-d:#465A40;--teal:#3E8FA8;--ink:#22301F;--muted:#6E7567;--line:#E3DCCC}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;background:radial-gradient(120% 120% at 80% -10%,#DCE6D6,rgba(220,230,214,0) 55%),linear-gradient(180deg,#F4EFE6,#EFE8DB);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px}
+  h1{font-family:'Playfair Display',serif;font-weight:600}
+  .title{text-align:center;margin-bottom:16px}
+  .title h1{font-size:clamp(26px,4vw,38px)}
+  .title p{color:var(--muted);font-size:15px;margin-top:6px}
+  .player{width:100%;max-width:780px;background:#10160E;border:1px solid var(--line);border-radius:24px;box-shadow:0 24px 60px -24px rgba(40,55,35,.45);overflow:hidden;position:relative}
+  .stage{width:100%;aspect-ratio:900/520;position:relative;overflow:hidden;background:#EAF1EC}
+  .stage svg{width:100%;height:100%;display:block;animation:kb var(--kb,6s) ease-out both}
+  @keyframes kb{0%{transform:scale(1)}100%{transform:scale(1.07)}}
+  .fadelayer{position:absolute;inset:0;transition:opacity .55s ease}
+  /* subtitle overlay on movie */
+  .sub{position:absolute;left:0;right:0;bottom:0;padding:30px 28px 22px;background:linear-gradient(0deg,rgba(8,12,6,.78),rgba(8,12,6,0));color:#fff;font-family:'Playfair Display',serif;font-size:clamp(16px,2.4vw,22px);text-align:center;line-height:1.35;opacity:0;transition:opacity .4s ease;pointer-events:none}
+  .sub.show{opacity:1}
+  /* start overlay */
+  .start{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:linear-gradient(160deg,#5C7355,#465A40);z-index:5;cursor:pointer}
+  .start .owl{width:90px;height:90px}
+  .start h2{font-family:'Playfair Display',serif;color:#fff;font-size:26px;font-weight:600}
+  .start .pbtn{background:#fff;color:var(--green-d);border:none;border-radius:100px;padding:13px 30px;font-weight:600;font-size:16px;cursor:pointer;display:inline-flex;gap:9px;align-items:center}
+  .start small{color:#CFE0C8;font-size:12.5px}
+  .ctrls{display:flex;align-items:center;gap:10px;padding:14px 22px;background:var(--paper)}
+  .ctrls button{cursor:pointer;border:none;background:var(--cream);color:var(--green-d);width:42px;height:42px;border-radius:50%;font-size:16px;display:grid;place-items:center;transition:background .2s ease}
+  .ctrls button:hover{background:#E4EADD}
+  .bar{flex:1;height:6px;background:var(--cream);border-radius:4px;overflow:hidden;margin:0 6px}
+  .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--green-l,#6E8A66));transition:width .4s linear}
+  .endbtn{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:11px 20px;border-radius:100px}
+  /* element animations */
+  .pop,.drop,.shake,.float,.spark,.glow,.drift,.rise,.idle,.walk{transform-box:fill-box;transform-origin:center}
+  @keyframes pop{0%{opacity:0;transform:scale(.6)}60%{transform:scale(1.06)}100%{opacity:1;transform:scale(1)}}
+  .pop{animation:pop .6s ease both}
+  @keyframes drop{0%{opacity:0;transform:translateY(-70px)}100%{opacity:1;transform:translateY(0)}}
+  .drop{animation:drop .7s ease both}
+  @keyframes rise{0%{opacity:0;transform:translateY(40px)}100%{opacity:1;transform:translateY(0)}}
+  .rise{animation:rise .7s ease both}
+  @keyframes walk{0%{opacity:0;transform:translateX(-120px)}100%{opacity:1;transform:translateX(0)}}
+  .walk{animation:walk 1s ease both}
+  @keyframes idle{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+  .idle{animation:idle 2.6s ease-in-out infinite}
+  @keyframes shake{0%,100%{transform:rotate(0)}25%{transform:rotate(-5deg)}75%{transform:rotate(5deg)}}
+  .shake{animation:shake .32s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .float{animation:float 2.4s ease-in-out infinite}
+  @keyframes spark{0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.25)}}
+  .spark{animation:spark 1.2s ease-in-out infinite}
+  @keyframes glow{0%,100%{opacity:.55;transform:scale(.95)}50%{opacity:1;transform:scale(1.06)}}
+  .glow{animation:glow 1.4s ease-in-out infinite}
+  @keyframes drift{0%{opacity:0;transform:translate(0,0) rotate(0)}20%{opacity:1}100%{opacity:.6;transform:translate(-170px,70px) rotate(-40deg)}}
+  .drift{animation:drift 3s linear infinite}
+</style>
+</head>
+<body>
+  <div class="title">
+    <h1>Max's Reset</h1>
+    <p>A little film about one career change — the emotional way</p>
+  </div>
+  <div class="player">
+    <div class="stage" id="stage">
+      <div class="fadelayer" id="layer"></div>
+      <div class="sub" id="sub"></div>
+      <div class="start" id="start" onclick="begin()">
+        <img class="owl" src="Career%20Reset%20App/bow.png" alt="Career Reset" style="border-radius:18px;object-fit:contain">
+        <h2>Max's Reset</h2>
+        <button class="pbtn">▶ Play the film</button>
+        <small>best with sound on · ~1 minute</small>
+      </div>
+    </div>
+    <div class="ctrls">
+      <button onclick="replay()" title="Restart">⟲</button>
+      <button id="pp" onclick="togglePause()" title="Pause / Play">⏸</button>
+      <button id="mute" onclick="toggleMute()" title="Mute music">🔊</button>
+      <div class="bar"><i id="prog"></i></div>
+      <button onclick="location.href='career-reset-partners.html'" title="Explore Career Reset">↗</button>
+    </div>
+  </div>
+
+<script>
+/* ---------- characters & props ---------- */
+function guy(expr,shirt){
+  shirt=shirt||'#6E8A66';
+  const F={
+    happy:{e:'<circle cx="-13" cy="-3" r="3.6"/><circle cx="13" cy="-3" r="3.6"/>',m:'<path d="M-12 12 Q0 21 12 12" fill="none" stroke="#8a5230" stroke-width="3" stroke-linecap="round"/>'},
+    shock:{b:'<path d="M-21 -19 Q-13 -25 -6 -20"/><path d="M6 -20 Q13 -25 21 -19"/>',e:'<circle cx="-13" cy="-2" r="6.5" fill="#fff" stroke="#2b2b2b" stroke-width="1.4"/><circle cx="-13" cy="-1" r="2.7"/><circle cx="13" cy="-2" r="6.5" fill="#fff" stroke="#2b2b2b" stroke-width="1.4"/><circle cx="13" cy="-1" r="2.7"/>',m:'<ellipse cx="0" cy="17" rx="5.5" ry="7.5" fill="#8a5230"/>',x:'<path d="M28 -8 q5 9 0 14 q-5 -5 0 -14Z" fill="#7fc7e8"/>'},
+    angry:{b:'<path d="M-22 -17 L-5 -11" stroke="#3B2B20" stroke-width="3.4" stroke-linecap="round"/><path d="M22 -17 L5 -11" stroke="#3B2B20" stroke-width="3.4" stroke-linecap="round"/>',e:'<path d="M-17 -3 L-8 -1" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"/><path d="M17 -3 L8 -1" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"/>',m:'<path d="M-11 18 Q0 12 11 18" fill="none" stroke="#8a5230" stroke-width="3" stroke-linecap="round"/>'},
+    think:{b:'<path d="M-20 -18 Q-13 -22 -6 -19"/><path d="M6 -21 Q13 -27 20 -23"/>',e:'<circle cx="-12" cy="-5" r="3.4"/><circle cx="14" cy="-6" r="3.4"/>',m:'<path d="M-9 14 L8 13" stroke="#8a5230" stroke-width="3" stroke-linecap="round"/>'},
+    excited:{e:'<path d="M-17 -5 Q-13 -12 -9 -5" fill="none" stroke="#2b2b2b" stroke-width="3"/><path d="M9 -5 Q13 -12 17 -5" fill="none" stroke="#2b2b2b" stroke-width="3"/>',m:'<path d="M-13 8 Q0 25 13 8 Z" fill="#8a5230"/><path d="M-7 15 Q0 21 7 15Z" fill="#e7869a"/>'},
+    content:{e:'<path d="M-17 -3 Q-13 -8 -9 -3" fill="none" stroke="#2b2b2b" stroke-width="2.6"/><path d="M9 -3 Q13 -8 17 -3" fill="none" stroke="#2b2b2b" stroke-width="2.6"/>',m:'<path d="M-10 11 Q0 18 10 11" fill="none" stroke="#8a5230" stroke-width="3" stroke-linecap="round"/>'},
+    sad:{b:'<path d="M-20 -20 Q-13 -16 -6 -18"/><path d="M6 -18 Q13 -16 20 -20"/>',e:'<circle cx="-13" cy="-1" r="3.4"/><circle cx="13" cy="-1" r="3.4"/>',m:'<path d="M-10 16 Q0 10 10 16" fill="none" stroke="#8a5230" stroke-width="3" stroke-linecap="round"/>'}
+  };
+  const f=F[expr]||F.happy;
+  const brows=f.b?`<g fill="none" stroke="#3B2B20" stroke-width="3" stroke-linecap="round">${f.b}</g>`:'';
+  return `<g>
+     <path d="M-30 112 Q-34 60 0 54 Q34 60 30 112 Z" fill="${shirt}"/>
+     <rect x="-9" y="34" width="18" height="20" rx="6" fill="#F1C9A5"/>
+     <ellipse cx="0" cy="0" rx="36" ry="40" fill="#F1C9A5"/>
+     <path d="M-37 -6 Q-42 -46 0 -46 Q42 -46 37 -6 Q22 -30 0 -28 Q-22 -30 -37 -6 Z" fill="#3B2B20"/>
+     <ellipse cx="-36" cy="2" rx="4" ry="6" fill="#F1C9A5"/><ellipse cx="36" cy="2" rx="4" ry="6" fill="#F1C9A5"/>
+     <g fill="#2b2b2b">${f.e}</g>${brows}${f.m}${f.x||''}
+   </g>`;
+}
+function person(expr,x,y,s,shirt,cls){return `<g transform="translate(${x},${y}) scale(${s})"><g class="${cls||'pop'}"><g class="idle">${guy(expr,shirt)}</g></g></g>`;}
+function bubble(cx,y,txt){const w=txt.length*10.5+34;return `<g class="pop"><rect x="${cx-w/2}" y="${y}" width="${w}" height="46" rx="15" fill="#fff" stroke="#E3DCCC"/><path d="M${cx-12} ${y+42} l0 20 l20 -20Z" fill="#fff"/><text x="${cx}" y="${y+29}" text-anchor="middle" font-family="Inter" font-weight="600" font-size="18" fill="#22301F">${txt}</text></g>`;}
+function emo(ch,x,y,sz,cls){return `<text x="${x}" y="${y}" font-size="${sz}" text-anchor="middle" class="${cls||''}">${ch}</text>`;}
+const OWL=`<g><path fill="#16264A" d="M44 30 C36 18 30 13 25 11 C28 20 32 26 40 33 Z"/><path fill="#16264A" d="M76 30 C84 18 90 13 95 11 C92 20 88 26 80 33 Z"/><path fill="#16264A" d="M60 20 C42 20 31 32 31 50 C31 64 35 78 45 90 C51 98 56 102 60 102 C64 102 69 98 75 90 C85 78 89 64 89 50 C89 32 78 20 60 20 Z"/><circle cx="48" cy="52" r="13.5" fill="#F4EFE6"/><circle cx="72" cy="52" r="13.5" fill="#F4EFE6"/><circle cx="50" cy="53" r="6.2" fill="#16264A"/><circle cx="70" cy="53" r="6.2" fill="#16264A"/><path fill="#16264A" d="M60 60 C63 66 61 71 60 73 C59 71 57 66 60 60 Z"/><path fill="#4FA98C" d="M58 104 C74 95 90 78 92 50 C84 55 75 62 71 74 C66 86 62 95 58 104 Z"/><path fill="#4FA98C" d="M92 50 L83 47 L88 41 L99 43 L96 54 Z"/></g>`;
+const LOGO="Career%20Reset%20App/bow.png";
+const BG=(c)=>`<rect x="0" y="0" width="900" height="520" fill="${c}"/>`;
+const GROUND=(c)=>`<rect x="0" y="430" width="900" height="90" fill="${c}"/>`;
+function chip(x,y,txt,sel){return `<g><rect x="${x}" y="${y}" width="118" height="46" rx="12" fill="${sel?'#5C7355':'#F4EFE6'}" stroke="${sel?'#5C7355':'#E3DCCC'}"/>${sel?`<text x="${x+12}" y="${y+29}" font-size="16">✓</text>`:''}<text x="${x+(sel?64:59)}" y="${y+29}" text-anchor="middle" font-family="Inter" font-weight="600" font-size="14" fill="${sel?'#fff':'#22301F'}">${txt}</text></g>`;}
+
+/* ---------- scenes ---------- */
+const SCENES=[
+ {mood:'calm',dur:4200,sub:"Meet Max — twelve years at the same company.",
+  say:"Meet Max. For twelve years, he gave everything to the same company.",svg:
+  BG('#E9EFE1')+GROUND('#DCE6CF')+`<g class="rise"><rect x="330" y="372" width="240" height="16" rx="4" fill="#C9A37A"/><rect x="360" y="320" width="160" height="58" rx="8" fill="#3E8FA8"/><rect x="372" y="332" width="136" height="34" rx="4" fill="#BFE0EC"/></g>`+emo('💼',640,400,52,'float')+person('happy',450,250,2.05,'#6E8A66','pop')},
+ {mood:'tense',dur:4600,sub:"One ordinary Tuesday, his role is eliminated.",
+  say:"Then, one ordinary Tuesday, his role was eliminated.",svg:
+  BG('#F6EAE2')+GROUND('#EEDBCF')+person('shock',360,255,2.0,'#6E8A66','pop')+`<g class="drop"><rect x="560" y="150" width="250" height="170" rx="12" fill="#fff" stroke="#E3DCCC"/><rect x="560" y="150" width="250" height="40" rx="12" fill="#C9544B"/><text x="685" y="177" text-anchor="middle" font-family="Inter" font-weight="600" font-size="16" fill="#fff">NOTICE</text><text x="685" y="235" text-anchor="middle" font-family="Inter" font-size="17" fill="#22301F">Your role has been</text><text x="685" y="262" text-anchor="middle" font-family="Inter" font-weight="600" font-size="18" fill="#C9544B">eliminated.</text><text x="685" y="300" text-anchor="middle" font-size="24">✕</text></g>`},
+ {mood:'tense',dur:4200,sub:"Shock. Denial. “This can't be happening.”",
+  say:"At first, he couldn't believe it. Shock. Denial. This can't be happening.",svg:
+  BG('#ECECE8')+GROUND('#DEDED8')+emo('❓',250,180,60,'float')+emo('❗',650,210,58,'spark')+person('shock',450,255,2.05,'#6E8A66','pop')+bubble(450,80,"This can't be real…")},
+ {mood:'tense',dur:4800,sub:"He panics — straight back into the same kind of job.",
+  say:"So he panicked, and rushed straight back into the very same kind of job.",svg:
+  BG('#F3E6E1')+GROUND('#E9D6CE')+emo('📄',300,150,46,'drift')+emo('📄',520,130,46,'drift')+emo('📄',700,170,46,'drift')+`<g class="rise"><rect x="560" y="250" width="150" height="46" rx="10" fill="#fff" stroke="#E3DCCC"/><text x="635" y="279" text-anchor="middle" font-family="Inter" font-size="14" fill="#6E7567">Same Job Inc.</text><rect x="560" y="305" width="150" height="46" rx="10" fill="#fff" stroke="#E3DCCC"/><text x="635" y="334" text-anchor="middle" font-family="Inter" font-size="14" fill="#6E7567">Same Role Ltd.</text><rect x="560" y="360" width="150" height="46" rx="10" fill="#fff" stroke="#E3DCCC"/><text x="635" y="389" text-anchor="middle" font-family="Inter" font-size="14" fill="#6E7567">Same Trap Co.</text></g>`+emo('💢',300,250,46,'spark')+person('angry',300,260,2.0,'#6E8A66','shake')},
+ {mood:'calm',dur:4400,sub:"A friend says: have you tried Career Reset?",
+  say:"Until a friend stopped him, and said: have you tried Career Reset?",svg:
+  BG('#E6EFF2')+GROUND('#D6E6EC')+person('sad',290,260,1.9,'#6E8A66','rise')+person('happy',640,255,1.95,'#C97B5A','walk')+`<g class="float" transform="translate(495,250)"><rect x="-34" y="-54" width="68" height="116" rx="12" fill="#fff" stroke="#16264A" stroke-width="2"/><image href="${LOGO}" x="-28" y="-46" width="56" height="56"/><text x="0" y="46" text-anchor="middle" font-family="Playfair Display,serif" font-weight="600" font-size="11" fill="#16264A">Career Reset</text></g>`+bubble(645,95,"Try Career Reset!")},
+ {mood:'calm',dur:5200,sub:"For the first time, he slows down — the Life Values exercise.",
+  say:"For the first time, Max slowed down, and did the Life Values exercise.",svg:
+  BG('#E9EFE1')+GROUND('#DCE6CF')+person('think',230,255,1.95,'#6E8A66','rise')+`<g class="pop" transform="translate(470,70)"><rect x="0" y="0" width="320" height="380" rx="22" fill="#FBF8F2" stroke="#E3DCCC"/><text x="160" y="44" text-anchor="middle" font-family="Playfair Display,serif" font-weight="600" font-size="20" fill="#22301F">What matters most?</text>`+chip(28,72,"Money")+chip(174,72,"Status")+chip(28,130,"Security")+chip(174,130,"Routine")+chip(28,200,"Freedom",true)+chip(174,200,"Autonomy",true)+`<text x="160" y="300" text-anchor="middle" font-family="Inter" font-size="13" fill="#6E7567">Pick the 2 that feel most “you”</text><rect x="80" y="320" width="160" height="42" rx="21" fill="#5C7355"/><text x="160" y="347" text-anchor="middle" font-family="Inter" font-weight="600" font-size="15" fill="#fff">Save my values</text></g>`},
+ {mood:'bright',dur:4600,sub:"What truly matters to him: Freedom & Autonomy.",
+  say:"And he saw what truly mattered to him. Freedom. And autonomy.",svg:
+  BG('#FFF7E0')+GROUND('#F1E7C8')+emo('💡',450,150,90,'glow')+emo('✨',330,150,40,'spark')+emo('✨',580,160,40,'spark')+person('excited',450,265,2.05,'#6E8A66','pop')+bubble(450,95,"That's me!")},
+ {mood:'bright',dur:4400,sub:"Instead of another job, he bets on himself.",
+  say:"So instead of chasing another job, Max bet on himself.",svg:
+  BG('#E6EFF2')+GROUND('#D6E6EC')+emo('🚀',650,180,64,'float')+emo('💡',250,170,48,'spark')+person('excited',400,255,1.95,'#6E8A66','rise')+`<g class="rise"><rect x="470" y="350" width="180" height="14" rx="4" fill="#C9A37A"/><rect x="505" y="300" width="110" height="56" rx="8" fill="#2b2b2b"/><rect x="514" y="308" width="92" height="40" rx="3" fill="#BFE0EC"/></g>`+bubble(400,90,"My own thing.")},
+ {mood:'bright',dur:5600,sub:"A business that fits who he really is — aligned, at last.",
+  say:"He built a business that fit who he really is. And for the first time in years, he felt aligned.",svg:
+  BG('#E9EFE1')+GROUND('#DCE6CF')+emo('☀️',120,120,60,'glow')+`<g class="rise"><rect x="540" y="230" width="260" height="200" rx="10" fill="#FBF8F2" stroke="#E3DCCC"/><rect x="540" y="230" width="260" height="42" rx="10" fill="#5C7355"/><text x="670" y="259" text-anchor="middle" font-family="Playfair Display,serif" font-weight="600" font-size="18" fill="#fff">MAX &amp; CO</text><rect x="566" y="300" width="60" height="100" fill="#BFE0EC"/><rect x="650" y="300" width="60" height="100" fill="#BFE0EC"/><rect x="724" y="300" width="50" height="100" rx="4" fill="#C9A37A"/></g>`+emo('📈',250,250,54,'float')+person('content',300,270,2.0,'#6E8A66','pop')},
+ {mood:'bright',dur:5200,end:true,sub:"Career Reset — same person, right direction.",
+  say:"Career Reset. Same person. Right direction.",svg:
+  `<rect x="0" y="0" width="900" height="520" fill="#465A40"/><rect x="0" y="0" width="900" height="520" fill="url(#eg)"/><defs><linearGradient id="eg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5C7355"/><stop offset="1" stop-color="#465A40"/></linearGradient></defs><image class="pop" href="${LOGO}" x="372" y="92" width="156" height="156"/><text x="450" y="345" text-anchor="middle" font-family="Playfair Display,serif" font-weight="700" font-size="46" fill="#fff">Career Reset</text><text x="450" y="384" text-anchor="middle" font-family="Inter" font-size="15" letter-spacing="3" fill="#CFE0C8">CLARITY · DIRECTION · GROWTH</text>`}
+];
+
+/* ---------- music (Web Audio) ---------- */
+let actx,master,musicOn=true,musTimer,chordIdx=0,curMood='calm';
+const MOODS={
+  calm:[[262,330,392],[294,349,440],[247,294,392],[262,330,392]],
+  tense:[[220,262,311],[233,277,349],[208,247,311],[196,233,294]],
+  bright:[[294,370,440],[392,494,587],[330,415,494],[294,370,440]]
+};
+function startMusic(){ if(actx)return; const AC=window.AudioContext||window.webkitAudioContext; if(!AC)return; actx=new AC(); master=actx.createGain(); master.gain.value=musicOn?0.05:0; master.connect(actx.destination); loopChord(); }
+function loopChord(){ if(!actx)return; const set=MOODS[curMood]||MOODS.calm; const chord=set[chordIdx%set.length]; chordIdx++; const t=actx.currentTime,dur=3.6;
+  chord.forEach((f,k)=>{ const o=actx.createOscillator(),g=actx.createGain(); o.type=k===0?'triangle':'sine'; o.frequency.value=f; g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(0.22,t+0.7); g.gain.linearRampToValueAtTime(0.0001,t+dur); o.connect(g); g.connect(master); o.start(t); o.stop(t+dur+0.1); });
+  musTimer=setTimeout(loopChord,dur*1000*0.9);
+}
+function stopMusic(){ clearTimeout(musTimer); }
+function toggleMute(){ musicOn=!musicOn; if(master)master.gain.value=musicOn?0.05:0; document.getElementById('mute').textContent=musicOn?'🔊':'🔇'; }
+
+/* ---------- narration (Web Speech) ---------- */
+let voice=null;
+function pickVoice(){ const vs=speechSynthesis.getVoices(); voice = vs.find(v=>/en[-_]?(GB|US)/i.test(v.lang)&&/female|samantha|victoria|karen|serena|google uk english female|zira/i.test(v.name)) || vs.find(v=>/^en/i.test(v.lang)) || vs[0]||null; }
+if('speechSynthesis'in window){ speechSynthesis.onvoiceschanged=pickVoice; pickVoice(); }
+function speak(text,cb){ if(!('speechSynthesis'in window)){return false;} speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(text); u.rate=0.96;u.pitch=1.0; if(voice)u.voice=voice; u.onend=cb; u.onerror=cb; speechSynthesis.speak(u); return true; }
+
+/* ---------- player ---------- */
+const stage=document.getElementById('stage'),layer=document.getElementById('layer'),subEl=document.getElementById('sub'),prog=document.getElementById('prog'),pp=document.getElementById('pp');
+let i=0,seq=0,paused=false,fallTimer=null;
+function durFor(s){ return Math.max(s.dur, s.say.length*55+1400); }
+function renderScene(){
+  curMood=SCENES[i].mood;
+  layer.style.opacity=0;
+  setTimeout(()=>{ layer.innerHTML=`<svg viewBox="0 0 900 520" style="--kb:${(durFor(SCENES[i])/1000)+1}s">${SCENES[i].svg}</svg>`; layer.style.opacity=1; },280);
+  subEl.textContent=SCENES[i].sub; subEl.classList.add('show');
+  prog.style.width=((i)/(SCENES.length-1)*100)+'%';
+}
+function playScene(){
+  renderScene();
+  const my=++seq;
+  const advance=()=>{ if(my!==seq||paused)return; if(SCENES[i].end){ finish(); } else { i++; playScene(); } };
+  clearTimeout(fallTimer);
+  const spoke=speak(SCENES[i].say,()=>{ if(my===seq) setTimeout(advance,500); });
+  clearTimeout(fallTimer);
+  fallTimer=setTimeout(advance, spoke ? durFor(SCENES[i])+5000 : durFor(SCENES[i]));
+}
+function finish(){ prog.style.width='100%'; subEl.innerHTML=SCENES[i].sub+`<br><a class="endbtn" href="career-reset-partners.html" style="margin-top:10px">Explore Career Reset →</a>`; pp.textContent='⟲'; stopMusic(); }
+function begin(){
+  document.getElementById('start').style.display='none';
+  startMusic(); i=0; seq++; paused=false; pp.textContent='⏸'; playScene();
+}
+function replay(){ seq++; clearTimeout(fallTimer); if('speechSynthesis'in window)speechSynthesis.cancel(); i=0; paused=false; pp.textContent='⏸'; if(!actx)startMusic(); else loopChord(); playScene(); }
+function togglePause(){
+  if(SCENES[i].end){ replay(); return; }
+  paused=!paused;
+  if(paused){ pp.textContent='▶'; if('speechSynthesis'in window)speechSynthesis.pause(); stopMusic(); clearTimeout(fallTimer); }
+  else { pp.textContent='⏸'; if('speechSynthesis'in window)speechSynthesis.resume(); loopChord(); // resume timeline
+    const my=++seq; const advance=()=>{ if(my!==seq||paused)return; if(SCENES[i].end){finish();}else{i++;playScene();} };
+    // re-arm advance in case onend was lost
+    fallTimer=setTimeout(advance, durFor(SCENES[i])); }
+}
+</script>
+</body>
+</html>
