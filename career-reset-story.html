@@ -69,7 +69,7 @@
       <div class="fadelayer" id="layer"></div>
       <div class="sub" id="sub"></div>
       <div class="start" id="start" onclick="begin()">
-        <img class="owl" src="Career%20Reset%20App/bow.png" alt="Career Reset" style="border-radius:18px;object-fit:contain">
+        <img class="owl" src="bow.png" alt="Career Reset" style="border-radius:18px;object-fit:contain">
         <h2>Max's Reset</h2>
         <button class="pbtn">▶ Play the film</button>
         <small>best with sound on · ~1 minute</small>
@@ -80,7 +80,7 @@
       <button id="pp" onclick="togglePause()" title="Pause / Play">⏸</button>
       <button id="mute" onclick="toggleMute()" title="Mute music">🔊</button>
       <div class="bar"><i id="prog"></i></div>
-      <button onclick="location.href='career-reset-partners.html'" title="Explore Career Reset">↗</button>
+      <button onclick="location.href='index.html'" title="Explore Career Reset">↗</button>
     </div>
   </div>
 
@@ -112,7 +112,7 @@ function person(expr,x,y,s,shirt,cls){return `<g transform="translate(${x},${y})
 function bubble(cx,y,txt){const w=txt.length*10.5+34;return `<g class="pop"><rect x="${cx-w/2}" y="${y}" width="${w}" height="46" rx="15" fill="#fff" stroke="#E3DCCC"/><path d="M${cx-12} ${y+42} l0 20 l20 -20Z" fill="#fff"/><text x="${cx}" y="${y+29}" text-anchor="middle" font-family="Inter" font-weight="600" font-size="18" fill="#22301F">${txt}</text></g>`;}
 function emo(ch,x,y,sz,cls){return `<text x="${x}" y="${y}" font-size="${sz}" text-anchor="middle" class="${cls||''}">${ch}</text>`;}
 const OWL=`<g><path fill="#16264A" d="M44 30 C36 18 30 13 25 11 C28 20 32 26 40 33 Z"/><path fill="#16264A" d="M76 30 C84 18 90 13 95 11 C92 20 88 26 80 33 Z"/><path fill="#16264A" d="M60 20 C42 20 31 32 31 50 C31 64 35 78 45 90 C51 98 56 102 60 102 C64 102 69 98 75 90 C85 78 89 64 89 50 C89 32 78 20 60 20 Z"/><circle cx="48" cy="52" r="13.5" fill="#F4EFE6"/><circle cx="72" cy="52" r="13.5" fill="#F4EFE6"/><circle cx="50" cy="53" r="6.2" fill="#16264A"/><circle cx="70" cy="53" r="6.2" fill="#16264A"/><path fill="#16264A" d="M60 60 C63 66 61 71 60 73 C59 71 57 66 60 60 Z"/><path fill="#4FA98C" d="M58 104 C74 95 90 78 92 50 C84 55 75 62 71 74 C66 86 62 95 58 104 Z"/><path fill="#4FA98C" d="M92 50 L83 47 L88 41 L99 43 L96 54 Z"/></g>`;
-const LOGO="Career%20Reset%20App/bow.png";
+const LOGO="bow.png";
 const BG=(c)=>`<rect x="0" y="0" width="900" height="520" fill="${c}"/>`;
 const GROUND=(c)=>`<rect x="0" y="430" width="900" height="90" fill="${c}"/>`;
 function chip(x,y,txt,sel){return `<g><rect x="${x}" y="${y}" width="118" height="46" rx="12" fill="${sel?'#5C7355':'#F4EFE6'}" stroke="${sel?'#5C7355':'#E3DCCC'}"/>${sel?`<text x="${x+12}" y="${y+29}" font-size="16">✓</text>`:''}<text x="${x+(sel?64:59)}" y="${y+29}" text-anchor="middle" font-family="Inter" font-weight="600" font-size="14" fill="${sel?'#fff':'#22301F'}">${txt}</text></g>`;}
@@ -192,7 +192,7 @@ function playScene(){
   clearTimeout(fallTimer);
   fallTimer=setTimeout(advance, spoke ? durFor(SCENES[i])+5000 : durFor(SCENES[i]));
 }
-function finish(){ prog.style.width='100%'; subEl.innerHTML=SCENES[i].sub+`<br><a class="endbtn" href="career-reset-partners.html" style="margin-top:10px">Explore Career Reset →</a>`; pp.textContent='⟲'; stopMusic(); }
+function finish(){ prog.style.width='100%'; subEl.innerHTML=SCENES[i].sub+`<br><a class="endbtn" href="index.html" style="margin-top:10px">Explore Career Reset →</a>`; pp.textContent='⟲'; stopMusic(); }
 function begin(){
   document.getElementById('start').style.display='none';
   startMusic(); i=0; seq++; paused=false; pp.textContent='⏸'; playScene();
