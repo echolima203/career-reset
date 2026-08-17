@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Career Reset — Partner Overview</title>
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -172,6 +170,9 @@
   .avoid-box{background:#F6EDE6;border:1px solid #EBD9CC}
   .need-box b,.avoid-box b{display:block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
   .need-box b{color:var(--green)}.avoid-box b{color:#B07B53}
+  .promise-affirm{background:var(--blue-soft);border:1px solid #CFE2E8;border-radius:16px;padding:16px 18px;margin-top:14px;font-size:14px;color:#2C5260;line-height:1.5}
+  .promise-affirm b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;color:var(--teal)}
+  .promise-affirm span{display:block;margin-top:6px;color:var(--green-d);font-weight:500}
   .incl h5{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
   .incl-list{display:flex;flex-direction:column;gap:10px}
   .incl-item{display:flex;gap:12px;align-items:flex-start;background:var(--cream);border:1px solid var(--line);border-radius:13px;padding:11px 13px}
@@ -237,6 +238,10 @@
   .statc .num{font-family:'Playfair Display',serif;font-size:40px;font-weight:600;color:var(--green-d);line-height:1}
   .statc .lbl{font-size:13.5px;color:var(--ink);margin-top:10px;line-height:1.4}
   .statc .src{font-size:11px;color:var(--muted);margin-top:12px;letter-spacing:.02em}
+  .statc .src a{color:var(--muted);text-decoration:none;border-bottom:1px solid #CFC8B8;transition:color .15s ease,border-color .15s ease}
+  .statc .src a:hover{color:var(--teal);border-color:var(--teal)}
+  .scale-foot a{color:var(--green-d);font-weight:600;text-decoration:none;border-bottom:1px solid #C5CEB8}
+  .scale-foot a:hover{color:var(--teal);border-color:var(--teal)}
   .scale-foot{margin-top:26px;font-size:14.5px;color:var(--muted);max-width:860px;line-height:1.6}
   @media(max-width:880px){.scale-grid{grid-template-columns:repeat(2,1fr)}}
 
@@ -337,6 +342,10 @@
   .pm-readiness .lbl{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:6px}
   .pm-readiness .track{height:9px;border-radius:6px;background:var(--cream-2);overflow:hidden}
   .pm-readiness .track i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--green-l))}
+
+.pm-choice{position:relative}
+.pm-choice.sel{background:#DFEBE2 !important;border-color:var(--green-d) !important;box-shadow:inset 0 0 0 2px var(--green-d);font-weight:600}
+.pm-choice.sel::after{content:"✓";position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--green-d);font-weight:800}
 </style>
 </head>
 <body spellcheck="false">
@@ -362,9 +371,9 @@
 <header class="hero">
   <section class="wrap">
     <div>
-      <span class="pill"><span class="dot"></span> A self-guided emotional coaching app</span>
-      <h1>The career change nobody<br>prepares you for is <span class="serif-i">emotional</span>.</h1>
-      <p>Career Reset guides people through the inner side of a transition — shock, doubt, identity loss — with a structured 5-level journey, diagnostics and daily practices. Affordable, self-serve, and designed to make every coaching session count.</p>
+      <span class="pill"><span class="dot"></span> A self-guided career-transition app</span>
+      <h1>The career change nobody<br>prepares you for is <span class="serif-i">emotional</span> — then <span class="serif-i">strategic</span>.</h1>
+      <p>Career Reset meets people in the inner side of a transition — shock, doubt, identity loss — then moves them into action: clarity and direction, a sharper CV and LinkedIn, interview confidence. One structured 5-level journey that turns feeling into momentum — affordable, self-serve, and built to make every coaching session count.</p>
       <span class="pill" style="margin-bottom:0"><span class="dot"></span> Partner overview for HR leaders & outplacement teams</span>
       <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap"><button class="cta-btn" onclick="openStory()">🎬 Watch Max's story</button><button class="cta-btn outline" onclick="openGal()">🖼 See interface examples</button></div>
     </div>
@@ -392,15 +401,14 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">The problem no one talks about</div>
-      <h2>You know <span class="serif-i">how</span> to find a job.<br>You don't know how to <span class="serif-i">be yourself</span> without one.</h2>
+      <h2>You can always find <span class="serif-i">another job</span>.<br>The hard part is staying <span class="serif-i">true to yourself</span> — in it, or without it.</h2>
     </div>
     <div class="stat-grid">
-      <div class="stat"><div class="num">6–18</div><div class="lbl">Months for a senior career transition</div></div>
-      <div class="stat"><div class="num">80%</div><div class="lbl">Of that time is emotional, not tactical</div></div>
-      <div class="stat"><div class="num">24/7</div><div class="lbl">In-pocket support between coaching sessions</div></div>
-      <div class="stat"><div class="num">2–10</div><div class="lbl">Minute sessions for instant relief + direction</div></div>
+      <div class="stat"><div class="num">6–18</div><div class="lbl">Months a senior career transition takes</div></div>
+      <div class="stat"><div class="num">80%</div><div class="lbl">Of that struggle is emotional, not tactical</div></div>
+      <div class="stat"><div class="num">8 in 10</div><div class="lbl">Workers are at risk of burnout (Mercer, 2024)</div></div>
+      <div class="stat"><div class="num">~31%</div><div class="lbl">Higher risk of depression after a forced job loss</div></div>
     </div>
-    <div style="margin-top:42px;text-align:center"><button class="cta-btn light" onclick="openStory()">🎬 See how it plays out — watch Max's story (1 min)</button></div>
   </div>
 </section>
 
@@ -408,16 +416,16 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Why now · the scale of the problem</div>
-      <h2>This isn't a niche need.</h2>
+      <h2>This isn't a niche need — this is the new normal.</h2>
       <p class="lead">Across every market, more people are in transition — and most are navigating it disengaged, burned out, or alone.</p>
     </div>
     <div class="scale-grid">
-      <div class="statc"><div class="num">402M</div><div class="lbl">people worldwide want work but don't have it — the global "jobs gap"</div><div class="src">ILO, 2024</div></div>
-      <div class="statc"><div class="num">62%</div><div class="lbl">of employees globally are "not engaged" — quietly checked out at work</div><div class="src">Gallup, 2024</div></div>
-      <div class="statc"><div class="num">43%</div><div class="lbl">report workplace burnout in 2025, up from 38% in 2023</div><div class="src">global workplace surveys</div></div>
-      <div class="statc"><div class="num">69%</div><div class="lbl">of professionals changed or considered changing careers in the past year</div><div class="src">FlexJobs, 2024</div></div>
+      <div class="statc"><div class="num">402M</div><div class="lbl">people worldwide want work but don't have it — the global "jobs gap"</div><div class="src"><a href="https://www.ilo.org/resource/news/ilo-expects-global-unemployment-drop-slightly-2024-slow-progress-reduce" target="_blank" rel="noopener">ILO, 2024 ↗</a></div></div>
+      <div class="statc"><div class="num">80%</div><div class="lbl">of the global workforce isn't engaged at work — engagement fell to a record-low 20%</div><div class="src"><a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" target="_blank" rel="noopener">Gallup, 2025 ↗</a></div></div>
+      <div class="statc"><div class="num">40%</div><div class="lbl">of employees worldwide feel "a lot of stress" every single day</div><div class="src"><a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" target="_blank" rel="noopener">Gallup, 2025 ↗</a></div></div>
+      <div class="statc"><div class="num">69%</div><div class="lbl">of professionals changed or considered changing careers in the past year</div><div class="src"><a href="https://www.flexjobs.com/blog/post/flexjobs-report-workers-considering-career-change" target="_blank" rel="noopener">FlexJobs, 2025 ↗</a></div></div>
     </div>
-    <p class="scale-foot">Disengagement alone costs the global economy an estimated <strong>$8.9 trillion — about 9% of global GDP</strong> (Gallup, 2024). Demand for support is rising in step: roughly <strong>168,000 active coaches</strong> in 2025, driven largely by layoffs and career pivots (ICF / industry data) — yet 1:1 coaching stays out of reach for most people. <span style="color:var(--teal)">Career Reset extends that support to everyone, affordably.</span></p>
+    <p class="scale-foot">Low engagement alone costs the global economy an estimated <strong>$10 trillion</strong> in lost productivity (<a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" target="_blank" rel="noopener">Gallup, 2025</a>). Demand for support is rising in step — the global professional-coaching industry was worth an estimated <strong>$4.6 billion</strong> (<a href="https://coachingfederation.org/resources/research/global-coaching-study/" target="_blank" rel="noopener">ICF Global Coaching Study, 2023</a>) — yet 1:1 coaching stays out of reach for most people. <span style="color:var(--teal)">Career Reset extends that support to everyone, affordably.</span></p>
   </div>
 </section>
 
@@ -471,7 +479,7 @@
         <div class="tag">Layer 2 · Discovery</div>
         <h3>Self-discovery tools</h3>
         <p style="font-size:14px;color:var(--muted);margin-bottom:14px">Built-in assessments and homework that turn reflection into evidence — and feed richer coaching conversations.</p>
-        <ul><li>Ikigai — purpose &amp; direction</li><li>Human Design — energy &amp; decisions</li><li>Moving Motivators · MBTI lens</li></ul>
+        <ul><li>Ikigai — purpose &amp; direction</li><li>Human Design — energy &amp; decisions</li><li>Key motivating drivers · work-style profile</li></ul>
       </div>
       <div class="layer l3">
         <div class="tag">Layer 3 · Architecture</div>
@@ -545,9 +553,9 @@
       <div class="feat blue" onclick="openFeat(2)"><div class="ic">💬</div><h4>Community</h4><p>Peer support discussions where users share progress and feel less alone in the transition.</p><div class="fcue">See details →</div></div>
       <div class="feat" onclick="openFeat(3)"><div class="ic">📝</div><h4>My Space</h4><p>A private hub for notes, value cards and the Achievement Bank — everything the user discovers, saved in one place.</p><div class="fcue">See details →</div></div>
       <div class="feat blue" onclick="openFeat(4)"><div class="ic">📊</div><h4>Dashboard</h4><p>Track progress over the last 7 days and across the journey — making invisible inner work visible and motivating.</p><div class="fcue">See details →</div></div>
-      <div class="feat" onclick="openFeat(5)"><div class="ic">🎯</div><h4>Ikigai Direction Map</h4><p>Connects values, strengths, meaning and money into 1–2 career hypotheses, with short real-world experiments to test them.</p><div class="fcue">See details →</div></div>
-      <div class="feat blue" onclick="openFeat(6)"><div class="ic">🔮</div><h4>Human Design for Career</h4><p>Optional personalization layer — an "operating manual" for energy, decisions and ideal work environment. Unlocks at Identity Shift.</p><div class="fcue">See details →</div></div>
-      <div class="feat" onclick="openFeat(7)"><div class="ic">📅</div><h4>Coaching &amp; Library</h4><p>Book live coaching sessions fueled by assessment results, plus a curated library of TED talks and books per level.</p><div class="fcue">See details →</div></div>
+      <div class="feat blue" onclick="openFeat(5)"><div class="ic">🔮</div><h4>Human Design for Career</h4><p>Optional personalization layer — an "operating manual" for energy, decisions and ideal work environment. Unlocks at Identity Shift.</p><div class="fcue">See details →</div></div>
+      <div class="feat" onclick="openFeat(6)"><div class="ic">📚</div><h4>Library &amp; recommendations</h4><p>A curated shelf of talks, books and resources — recommended to match exactly where each person is in their journey.</p><div class="fcue">See details →</div></div>
+      <div class="feat blue" onclick="openFeat(7)"><div class="ic">📅</div><h4>Book a career coach</h4><p>When self-guided work isn't enough, book a live session with a career or life coach — right from the app, with your results ready for them.</p><div class="fcue">See details →</div></div>
     </div>
   </div>
 </section>
@@ -570,12 +578,12 @@
 <section id="contact" class="contact">
   <div class="wrap">
     <div class="eyebrow" style="color:#BCD0B3">Let's talk partnership</div>
-    <h2>Bring an emotional reset<br>to the people you support.</h2>
+    <h2>Bring your people a complete reset —<br><span style="color:#E6C98A">emotional</span> support and <span style="color:#E6C98A">strategic</span> direction, in one place.</h2>
     <p>Whether you're an HR leader rethinking offboarding, or an outplacement agency extending your reach — let's explore how Career Reset fits your programmes.</p>
     <div class="ccard">
       <div class="nm">Ekaterina Zaychenkova</div>
       <div class="rl">Founder &amp; Product Owner · Career Reset</div>
-      <a href="mailto:bonkly@gmail.com">bonkly@gmail.com</a>
+      <a href="mailto:info@careerresetapp.com">info@careerresetapp.com</a>
     </div>
   </div>
 </section>
@@ -660,6 +668,76 @@
   </div>
 </div>
 
+<!-- Boiling exercise interactive overlay -->
+<div class="pulse-ov" id="boilOv">
+  <div class="pulse-modal">
+    <div class="pm-bar">
+      <div class="crlogo pm-logo"></div>
+      <b>Exercise demo · What's boiling inside</b>
+      <button class="pm-close" onclick="closeBoil()" aria-label="Close">✕</button>
+    </div>
+    <div class="pm-prog"><i id="boilProg"></i></div>
+    <div class="pm-body" id="boilBody"></div>
+    <div class="pm-foot" id="boilFoot"></div>
+  </div>
+</div>
+
+<!-- True Self assessment interactive overlay -->
+<div class="pulse-ov" id="tsOv">
+  <div class="pulse-modal">
+    <div class="pm-bar">
+      <div class="crlogo pm-logo"></div>
+      <b>Assessment demo · True Self / Identity Reconnection</b>
+      <button class="pm-close" onclick="closeTS()" aria-label="Close">✕</button>
+    </div>
+    <div class="pm-prog"><i id="tsProg"></i></div>
+    <div class="pm-body" id="tsBody"></div>
+    <div class="pm-foot" id="tsFoot"></div>
+  </div>
+</div>
+
+<!-- Fear map interactive overlay -->
+<div class="pulse-ov" id="fearOv">
+  <div class="pulse-modal">
+    <div class="pm-bar">
+      <div class="crlogo pm-logo"></div>
+      <b>Exercise demo · The fear map</b>
+      <button class="pm-close" onclick="closeFear()" aria-label="Close">✕</button>
+    </div>
+    <div class="pm-prog"><i id="fearProg"></i></div>
+    <div class="pm-body" id="fearBody"></div>
+    <div class="pm-foot" id="fearFoot"></div>
+  </div>
+</div>
+
+<!-- Achievement Bank interactive overlay -->
+<div class="pulse-ov" id="achOv">
+  <div class="pulse-modal">
+    <div class="pm-bar">
+      <div class="crlogo pm-logo"></div>
+      <b>Exercise demo · Achievement Bank</b>
+      <button class="pm-close" onclick="closeAch()" aria-label="Close">✕</button>
+    </div>
+    <div class="pm-prog"><i id="achProg"></i></div>
+    <div class="pm-body" id="achBody"></div>
+    <div class="pm-foot" id="achFoot"></div>
+  </div>
+</div>
+
+<!-- TED practice (Prototype your next move) overlay -->
+<div class="pulse-ov" id="protoOv">
+  <div class="pulse-modal">
+    <div class="pm-bar">
+      <div class="crlogo pm-logo"></div>
+      <b>TED-based additional practice · Prototype your next move</b>
+      <button class="pm-close" onclick="closeProto()" aria-label="Close">✕</button>
+    </div>
+    <div class="pm-prog"><i id="protoProg"></i></div>
+    <div class="pm-body" id="protoBody"></div>
+    <div class="pm-foot" id="protoFoot"></div>
+  </div>
+</div>
+
 <!-- Feature sub-page overlay -->
 <div class="pulse-ov" id="featOv">
   <div class="pulse-modal">
@@ -689,7 +767,7 @@ const LEVELS = [
       ["🌬️","Emotional regulation","Grounding meditation · Stay in the moment",`<div class="sit-sec-lbl">The exercise</div><p style="font-size:14.5px;color:var(--muted);line-height:1.6">A short guided grounding meditation on presence, over calming background audio — bringing attention back to the body and the present moment when thoughts spin.</p><div><span class="fchip">🎧 Audio · “Stay in the moment”</span></div><div class="fdisc">Audio track to be recorded — placeholder in V1.</div>`],
       ["💬","Affirmation","“I breathe. I'm safe. I can take my time.”",`<div class="sit-sec-lbl">The affirmation</div><div class="sit-help" style="font-family:'Playfair Display',serif;font-size:20px;text-align:center;color:var(--green-d)">“I breathe. I'm safe. I can take my time.”</div><p style="font-size:14px;color:var(--muted);margin-top:12px">A single calming line to return to whenever the moment feels like too much.</p>`],
       ["📋","Assessment","How grounded vs. destabilised am I?",`<div class="sit-sec-lbl">What it measures</div><p style="font-size:14.5px;color:var(--muted);line-height:1.6">A 2-minute mirror of your current state — not a test with grades. About 10 statements, each tapped on a 1–5 scale (shown as circles, not bare numbers).</p><div class="fgrid2"><div class="fcard"><b>Nervous system / overload</b><span>How flooded you feel</span></div><div class="fcard"><b>Collapse of meaning</b><span>“Who am I now?”</span></div><div class="fcard"><b>Avoidance of truth</b><span>“Pretending I'm OK”</span></div><div class="fcard"><b>Readiness to ground</b><span>Capacity to steady yourself</span></div></div><p style="font-size:14px;color:var(--muted);margin-top:10px">→ produces a <strong>Stability Score (0–100)</strong> that grows as you return over time.</p><div class="sit-sec-lbl">Sample statements</div><ul class="flist"><li>“I still can't believe this is happening to me”</li><li>“My thoughts feel like fog”</li><li>“I have no energy even for simple things”</li></ul><div class="sit-help">What the user sees — a soft summary, no diagnosis: “Your nervous system is overloaded — that's expected. Your only task now is to get your footing back. We'll start small.”</div>`],
-      ["📓","Homework","Anchor of the week",`<div class="sit-sec-lbl">The task</div><div class="sit-help">“Pick ONE small anchor and repeat it every day this week. Not two, not five. One. Stability matters more than intensity.”</div><div class="sit-sec-lbl">How it works</div><ul class="flist"><li>Choose one micro-ritual: breath · fresh air · sleep · water</li><li>A cumulative 7-day tracker</li><li>Missing a day never resets progress — no burning streaks</li><li>One gentle, optional daily reminder</li></ul><div class="fdisc">End of the week: “You gave yourself an anchor N days out of 7. Your nervous system remembers that.”</div>`]
+      ["🎥","TED talk","Scott Dinsmore — How to find work you love",`<div class="sit-sec-lbl">Why this talk at this level</div><p style="font-size:14.5px;color:var(--muted);line-height:1.6">Scott Dinsmore quit a job that made him miserable and spent years learning how people find work that feels meaningful. At PAUSE, this talk works as quiet company: it normalises walking away from what was wrong — and plants the first seed that something meaningful exists on the other side. Nothing to do, nothing to decide. Just watch when you have a calm moment.</p><a href="https://www.ted.com/talks/scott_dinsmore_how_to_find_work_you_love" target="_blank" rel="noopener" style="display:inline-block;background:var(--green-d);color:#fff;padding:11px 18px;border-radius:24px;font-weight:600;text-decoration:none;margin-top:6px">▶ Watch on TED</a><div class="fdisc">Opens TED&#39;s official page. Optional content layer — it does not affect level progress.</div>`],["📓","Homework","Anchor of the week",`<div class="sit-sec-lbl">The task</div><div class="sit-help">“Pick ONE small anchor and repeat it every day this week. Not two, not five. One. Stability matters more than intensity.”</div><div class="sit-sec-lbl">How it works</div><ul class="flist"><li>Choose one micro-ritual: breath · fresh air · sleep · water</li><li>A cumulative 7-day tracker</li><li>Missing a day never resets progress — no burning streaks</li><li>One gentle, optional daily reminder</li></ul><div class="fdisc">End of the week: “You gave yourself an anchor N days out of 7. Your nervous system remembers that.”</div>`]
     ]},
   {no:"02",name:"RECONNECT",title:"Find yourself back",stage:"Frustration · Fear",
     intent:"Reconnect to values, strengths and skills. Rebuild your inner base: energy, self-trust, routine.",
@@ -698,7 +776,33 @@ const LEVELS = [
     desc:"You may be functioning, but not fully connected to yourself. This level is about rebuilding your inner base: energy, self-trust, routine, and clarity about what supports you.",
     means:["You're no longer in pure shock, but you may still feel fragile, tired, inconsistent or unsteady.","Before choosing a new direction, you need to reconnect with your own rhythm and values.","Reconnecting with your support system matters as much as any plan."],
     promise:"Anger and fear aren't weakness. They're energy to be lived through, not hidden.",
-    incl:[["🧠","Awareness practice","What supports me vs. what drains me"],["🪞","Reflection practice","Reconnect with your own rhythm"],["✅","Action practice","Rebuild one supportive routine"],["🌬️","Emotional regulation","Calming, stabilizing meditation"],["💬","Affirmation","Self-trust & steadiness"],["📋","Assessment","20-statement self-connection scan"],["📓","Homework","Stressor map — what exhausts me"]]},
+    incl:[
+      ["🧠","Awareness practice","What's boiling inside",`<div class="sit-sec-lbl">The exercise</div><p style="font-size:14.5px;color:var(--muted);line-height:1.6">Give the whole emotional range of this level — anger, resentment, irritation, disappointment — a safe outlet, so it doesn't sink into the body or turn into shutdown. At the end, the feeling reveals what it was protecting: a value that matters to you.</p><div class="sit-sec-lbl">How it works</div><ul class="flist"><li>Intro: <em>"Here you can be honest: anger, resentment, irritation, disappointment — whatever you feel has a right to be here. Mark what stung. Nobody will see this."</em></li><li>A deck of <strong>40 cards</strong>, one at a time — anger, resentment, guilt, shame, envy, lost control, pressure to perform… covering all six situations</li><li>Each card: tap <em>"That stings"</em> or <em>"Not mine"</em> — no lists, no writing, one feeling at a time</li><li>The turn: <em>"What value of yours did this situation touch?"</em> → pick from value cards: fairness · respect · recognition · freedom · stability · growth · meaning · belonging · autonomy · security · honesty · creativity</li><li>Chosen values are saved to <strong>My Space → My Values</strong></li></ul><div class="sit-help">Closing line: "Behind these feelings is something you deeply care about. We'll come back to these values when we build what's next."</div><div class="fdisc">No free writing — one card at a time. Behind the scenes each card carries hidden theme and direction tags (never shown to the user) that power an interpreted, number-free result: your loudest themes, where the feelings point, and the values they guard.</div>`],
+      ["🪞","Reflection practice","The fear map — real risk vs. anxiety",`<div class="sit-sec-lbl">The exercise</div><p style="font-size:14.5px;color:var(--muted);line-height:1.6">Fear in your head always inflates into catastrophe. On screen it shrinks into a list you can work with.</p><div class="sit-sec-lbl">How it works</div><ul class="flist"><li>Mark your fears from <strong>40 items</strong> across six hidden themes — competence, security, judgment, time, identity, belonging</li><li>Then test each fear, one at a time: <em>real risk</em> — a concrete, likely consequence — or <em>anxiety inflating</em> (it speaks in “always”, “never”, catastrophes)</li></ul><div class="fflow"><span class="fchip">⚠️ Real risk</span><span class="fchip">🌫️ Anxiety inflating</span></div><ul class="flist" style="margin-top:10px"><li>For each real risk — actions are <strong>matched to that fear</strong>: five theme-specific moves + two universal ones (money fears get arithmetic; competence fears get skills and facts; social fears get story-work…)</li></ul><div class="sit-help">Result: the real/inflated ratio interpreted, the dominant shape of your fear (competence / security / judgment / time / identity / belonging) with a psychological read, and a compiled plan — one move per real risk.</div><div class="fdisc">Zero writing. Map and steps saved to the practice card; the anxiety pile is revisited a week later — most of it shrinks on its own.</div>`],
+      ["✅","Action practice","Achievement Bank — proof of what you can do",`<div class="sit-sec-lbl">The exercise</div><p style="font-size:14.5px;color:var(--muted);line-height:1.6">When confidence is low, we forget what we've already done well. This practice collects real proof of your strengths, progress and value.</p><div class="sit-sec-lbl">How it works</div><ul class="flist"><li><strong>Reframe first:</strong> an achievement is not only a promotion. It can be surviving a hard period, setting a boundary, learning a new skill, helping someone, staying consistent, making a brave decision.</li><li><strong>Guided prompts</strong> — 5–10 questions shown one at a time: <em>What difficult situation did you manage better than expected? · When did you keep going despite uncertainty? · What setback did you recover from? · Who came to you for advice? · What feedback do you still remember? · What can you do now that once intimidated you?</em></li><li><strong>Select your top 3:</strong> which matter most right now · which makes you feel most capable · which best represents who you are</li><li>Each becomes an <strong>Achievement Card</strong> with 7 fields: Title · Situation · What I did · Result · Strengths used · Why it matters to me · What this says about me</li><li>Cards are saved to <strong>My Space → Achievement Bank</strong> — a resource to reread on hard days</li><li><strong>Deep, structured work (~20–25 min):</strong> a full card is built for each of the top three — one field per screen, with a worked example under every field. Strengths are tapped from chips; the identity line is your own words or a ready statement. Strengths accumulate into a profile that feeds Level 4</li></ul><div class="sit-help">Closing line: "These qualities are you. They weren't dismissed with the job, and they didn't expire with the change."</div>`],
+      ["🌬️","Emotional regulation","Steady ground — a guided meditation",`<div class="sit-sec-lbl">The exercise</div><p style="font-size:14.5px;color:var(--muted);line-height:1.6">A ~6-minute guided meditation for the "hot" emotions of this level — anger, fear, agitation — over calm background audio. It doesn't try to make the feeling go away; it helps the nervous system settle enough to hear what the feeling is protecting. Best right before or after the practices.</p><div><span class="fchip">🎧 Audio · "Steady ground" · ~6 min</span><span class="fchip">Produced via AI voice (multilingual)</span></div><div class="sit-sec-lbl">Full narration script (V1)</div><div style="font-size:13.5px;color:var(--muted);line-height:1.62;background:#F6F3EC;border-radius:10px;padding:12px 14px;white-space:pre-line">Find a position where your body can be held — a chair, the floor, wherever you are. You don't have to sit up straight or do this "right." [pause]
+
+Let your eyes close, or just soften your gaze downward. [pause]
+
+We're not here to fix anything or push any feeling away. Whatever is here — anger, fear, restlessness, that tight buzzing — it's allowed to be here. It's not a problem to solve. It's information, and we're just going to make room for it. [pause]
+
+Start with one slow breath. In through the nose… and a longer breath out. [pause] Again — in… and slowly out, like a sigh. [pause] Let the out-breath be longer than the in-breath. That's the part that tells your body: the emergency is over. [pause]
+
+Now bring your attention to where the feeling lives in your body. Maybe it's heat in the chest. A knot in the stomach. A tightness in the jaw or the shoulders. [pause] You don't need to change it. Just notice it, the way you'd notice weather. "Ah — there it is." [pause]
+
+Put a hand there, if that feels okay. Let the warmth of your own hand rest on the place that's holding so much. [pause] You've been carrying this. Of course you're tired. [pause]
+
+Breathe into that spot. Not to force it open — just to keep it company. In… and out. [pause] With each out-breath, let the ground under you take a little more of the weight. The chair, the floor — it's holding you. You don't have to hold everything yourself right now. [pause]
+
+If the feeling has a message, it's usually simple. It's usually: something here matters to me. The anger guards something you value. The fear points at something you care about. You don't have to name it now. Just let it be true. [pause]
+
+Take one more slow breath in… and a long breath out. [pause]
+
+And when you're ready, let your eyes open. Nothing to achieve. You gave your nervous system a few minutes of safety — and that's enough. That's the work.</div><div class="fdisc">Script is final for V1. Audio to be produced via AI voice synthesis per language (see the developer spec). Background: soft ambient pad, ~50 BPM, royalty-free/licensed.</div>`],
+      ["💬","Affirmation","“My anger knows what I value. My fear shows what I care about.”",`<div class="sit-sec-lbl">The affirmation</div><div class="sit-help" style="font-family:'Playfair Display',serif;font-size:20px;text-align:center;color:var(--green-d)">“My anger knows what I value.<br>My fear shows what I care about.”</div><p style="font-size:14px;color:var(--muted);margin-top:12px">A line that reframes the two loudest emotions of this level as information — not enemies.</p>`],
+      ["📋","Assessment","True Self / Identity Reconnection — 40 statements",`<div class="sit-sec-lbl">What it measures</div><p style="font-size:14.5px;color:var(--muted);line-height:1.6">A ~4 minute mirror: 40 statements on a 1–5 scale (circles, not bare numbers) — 8 per dimension, with reversed items mixed in so answers stay honest.</p><div class="fgrid2"><div class="fcard"><b>True Self Connection</b><span>Contact with what matters to you</span></div><div class="fcard"><b>Suppressed Desire</b><span>Wishes you haven't allowed</span></div><div class="fcard"><b>Meaning Reawakening</b><span>Interest waking back up</span></div><div class="fcard"><b>Authenticity Gap</b><span>How much the old role wasn't you</span></div></div><div class="sit-sec-lbl">Sample statements</div><ul class="flist"><li>"Even now, I can feel some inner ground under me"</li><li>"There's something I've wanted for a long time but keep forbidding myself to consider"</li><li>"Lately, an interest in something is waking up in me"</li><li>"My current or former role poorly reflects who I am"</li></ul><p style="font-size:14px;color:var(--muted);margin-top:10px">→ four scores (0–100) saved to the Dashboard; repeat runs show progress arrows ↑↓.</p><div class="sit-help">What the user sees: a layered summary in three parts — your emotional tone (by inner tension), your two leading signals, and what their combination says about where you are. Numbers live here; the practices stay number-free.</div>`],
+      ["🎥","TED talk","Bill Burnett — 5 steps to designing the life you want",`<div class="sit-sec-lbl">Why this talk at this level</div><p style="font-size:14.5px;color:var(--muted);line-height:1.6">Stanford design professor Bill Burnett shows how designers turn uncertainty into options, prototypes and small experiments. At RECONNECT it plants a key reframe early: your next chapter won&#39;t come from one perfect decision — it will be designed, tested and adjusted. Exactly the thinking the journey builds toward at Levels 3–4.</p><a href="https://www.ted.com/talks/bill_burnett_5_steps_to_designing_the_life_you_want" target="_blank" rel="noopener" style="display:inline-block;background:var(--green-d);color:#fff;padding:11px 18px;border-radius:24px;font-weight:600;text-decoration:none;margin-top:6px">▶ Watch on TED</a> <button onclick="closeEx();openProto()" style="display:inline-block;background:transparent;color:var(--green-d);border:1.5px solid var(--green-d);padding:10px 16px;border-radius:24px;font-weight:600;cursor:pointer;margin-top:6px;font:inherit;font-weight:600">▶ Try the TED-based practice</button><div class="fdisc">Opens TED&#39;s official page. Optional content layer — it does not affect level progress.</div>`],["📓","Homework","Stressor map — what exhausts me",`<div class="sit-sec-lbl">The task</div><div class="sit-help">"This week, notice and mark what drains your energy. Not to endure it — to see the source. Exhaustion almost always has a specific name."</div><div class="sit-sec-lbl">The stressor list (tap all that apply)</div><ul class="flist"><li><strong>Organisation:</strong> unclear role · responsibility without authority · constant reorganisations · too many parallel projects · "do more with less" · long approval chains</li><li><strong>People & communication:</strong> different cultural codes · remote teams where trust takes more energy · working in a non-native language · "doing good work isn't enough — you must be seen" · impostor feelings</li><li><strong>Time & load:</strong> time-zone spread · back-to-back meetings · always-on expectations (evenings, weekends) · work following you everywhere</li><li><strong>Career & recognition:</strong> opaque evaluation · unclear promotion rules · "high potential" meaning more load without more support</li></ul><div class="sit-sec-lbl">How it works</div><ul class="flist"><li>Multiple choice, no writing; the app counts which <em>categories</em> are overloaded → your Stressor Map in the Dashboard</li><li>The same tool returns at Level 4 — each marked stressor becomes a ready-made boundary for your next role</li></ul><div class="fdisc">End of week: "Here's what drains you most. We'll use this to set boundaries and design a role that doesn't repeat it."</div>`]
+    ]},
   {no:"03",name:"ALIGN",title:"Identity shift",stage:"Exploration",
     intent:"Release the old story. Upgrade beliefs and self-trust. Make space for a new version of yourself.",
     need:["Permission to evolve","Mindset shift","Deeper self-recognition"],
@@ -706,7 +810,15 @@ const LEVELS = [
     desc:"You may already sense that your old role, identity, or way of living no longer fits. This level is about releasing the old story and making space for a new version of yourself.",
     means:["You're in transition between who you were and who you're becoming.","It can feel inspiring and uncomfortable at the same time.","You may be questioning old beliefs, old ambitions, or old definitions of success."],
     promise:"The old no longer fitting isn't a breakdown — it's the beginning of a new you.",
-    incl:[["🧠","Awareness practice","Identity & authenticity gap"],["🪞","Reflection practice","Old story vs. who you're becoming"],["✅","Action practice","Values → boundaries"],["🌬️","Emotional regulation","Self-trust meditation"],["💬","Affirmation","“I release the old. I rise into who I'm becoming.”"],["🧩","Assessment","Career personality pattern (MBTI lens)"],["📓","Homework","Old story → new-identity notes"]]},
+    incl:[
+      ["🧠","Awareness practice","Old vs. true — what's no longer mine",`<div class="sit-sec-lbl">The exercise</div><p style="font-size:14.5px;color:var(--muted);line-height:1.6">See which roles, goals and beliefs were truly yours — and which were imposed from outside. The core sorting work of the identity shift.</p><div class="sit-sec-lbl">How it works</div><ul class="flist"><li>A deck of belief/role cards appears one by one: <em>"success = a higher title" · "I must always be available" · "changing paths at my age is failure" · "being useful means never saying no" · "my job title is who I am" · "stability matters more than meaning" · "I should be grateful and not want more"</em> (+ situation-tagged variants)</li><li>Sort each card into three buckets:</li></ul><div class="fflow"><span class="fchip">💚 Mine</span><span class="fchip">🎭 Imposed</span><span class="fchip">🤔 Not sure</span></div><ul class="flist" style="margin-top:10px"><li>The "Imposed" pile is shown back: <em>"These were never yours to carry. Which are you ready to set down?"</em> → tap to release</li></ul><div class="sit-help">Closing line: "What no longer fits isn't a breakdown — it's the beginning of the new you."</div><div class="fdisc">Feeds the Authenticity Gap picture. No writing — cards and sorting only.</div>`],
+      ["🪞","Reflection practice","Your energy type — strategy · decisions · direction",`<div class="sit-sec-lbl">The exercise</div><p style="font-size:14.5px;color:var(--muted);line-height:1.6"><strong>Human Design for Career</strong> — a personal "operating manual": how you're built to move through life, restore energy, and make decisions. Unlocked here, it personalises Levels 4–5.</p><div class="sit-sec-lbl">What you learn about yourself</div><div class="fgrid2"><div class="fcard"><b>Life strategy</b><span>How to move with less resistance</span></div><div class="fcard"><b>Energy source</b><span>What fills you, what drains you</span></div><div class="fcard"><b>Decision authority</b><span>HOW you're built to decide — gut, pause, talking it through</span></div><div class="fcard"><b>Talents & strengths</b><span>Your natural "superpower"</span></div></div><div class="sit-sec-lbl">How it works</div><ul class="flist"><li>Basic profile: a short tap-only questionnaire</li><li>Extended profile (paid layer): date, time and place of birth</li><li>All descriptions written originally — practical career language, not esoterics or prediction</li><li>Profile saved to Dashboard; boundaries (below), Level 4 design and Level 5 rhythm adapt to it</li></ul><div class="fdisc">Naming: "Human Design for Career" with a not-affiliated disclaimer; all texts are our own.</div>`],
+      ["✅","Action practice","Values → boundaries",`<div class="sit-sec-lbl">The exercise</div><p style="font-size:14.5px;color:var(--muted);line-height:1.6">Turn insight into concrete yes/no rules for your future work — the burnout-prevention core of the app.</p><div class="sit-sec-lbl">Step 1 — value cards (5 → 3 → rank)</div><ul class="flist"><li>Tap value cards; each selected card drops into your list — <strong>maximum 5</strong> (a counter shows "X of 5")</li><li>Narrow the 5 down to <strong>3</strong> by un-tapping</li><li>Drag the final 3 into order of importance, top to bottom</li><li>Saved with priority to <strong>My Space → My Values</strong></li></ul><div class="sit-sec-lbl">Step 2 — boundaries from values & stressors</div><ul class="flist"><li>For each top value + each stressor marked at Level 2, the app offers ready boundary phrasings: <em>"I no longer take meetings after 19:00" · "I don't answer work messages on weekends" · "I won't accept responsibility without authority" · "I protect one evening a week for myself"</em></li><li>Tap to adopt; boundaries are matched to your energy type (above)</li><li>Saved to <strong>My Space</strong> — reused at Level 4 when designing the new role</li></ul><div class="sit-help">Closing line: "A value without a boundary stays a wish. A boundary makes it real."</div>`],
+      ["🌬️","Emotional regulation","Self-trust meditation",`<div class="sit-sec-lbl">The exercise</div><p style="font-size:14.5px;color:var(--muted);line-height:1.6">A guided meditation for the hardest point of the curve — releasing the old identity and trusting the one emerging — over calming background audio.</p><div><span class="fchip">🎧 Audio · "Self-trust"</span></div><div class="fdisc">Audio track to be recorded — placeholder in V1.</div>`],
+      ["💬","Affirmation","“I release the old. I rise into who I'm becoming.”",`<div class="sit-sec-lbl">The affirmation</div><div class="sit-help" style="font-family:'Playfair Display',serif;font-size:20px;text-align:center;color:var(--green-d)">“I release the old.<br>I rise into who I'm becoming.”</div><p style="font-size:14px;color:var(--muted);margin-top:12px">The identity-shift line — permission to evolve, in one breath.</p>`],
+      ["🧩","Assessment","Authenticity Gap — real vs. borrowed",`<div class="sit-sec-lbl">What it measures</div><p style="font-size:14.5px;color:var(--muted);line-height:1.6">The core diagnostic of the whole app: how far your daily work-self sits from your true self — and what new working identity is emerging.</p><div class="fgrid2"><div class="fcard"><b>Authentic Career Alignment</b><span>Overall fit score</span></div><div class="fcard"><b>Authenticity Gap</b><span>Real vs. adapted self</span></div><div class="fcard"><b>True vs. Adapted Self</b><span>Where you perform a version of you</span></div><div class="fcard"><b>Misalignment hotspots</b><span>Which areas pinch most</span></div></div><div class="sit-sec-lbl">Sample statements (1–5 scale)</div><ul class="flist"><li>"At work I often played a version of myself that wasn't real"</li><li>"I did what was expected rather than what I wanted"</li><li>"I can feel a new version of me forming"</li></ul><div class="sit-help">What the user sees: "Here's what in you is real, what is conditioned, what no longer fits — and what new working identity is starting to show." + Gap score & hotspot map to the Dashboard.</div>`],
+      ["📓","Homework","One choice toward yourself, daily",`<div class="sit-sec-lbl">The task</div><div class="sit-help">"Each day this week, notice one moment where you can choose your real self — and mark it. A small no, an honest answer, a decision made your way, not by others' expectations."</div><div class="sit-sec-lbl">How it works</div><ul class="flist"><li>Each day: tap the type of choice made — <em>boundary held · honest answer · decision by my own authority</em></li><li>Linked to My Values, boundaries and your energy type</li><li>Cumulative 7-day tracker — missing a day never resets progress</li></ul><div class="fdisc">End of week: "You made N moves toward your real self. The new you is built from exactly these small choices."</div>`]
+    ]},
   {no:"04",name:"DESIGN",title:"New action plan",stage:"Decision",
     intent:"Turn self-understanding into direction. Build a plan aligned to who you are now — choose a direction and criteria.",
     need:["Direction","Decision criteria","Practical experimentation"],
@@ -726,8 +838,8 @@ const LEVELS = [
 ];
 const row=document.getElementById('levelRow'),detail=document.getElementById('levelDetail');
 LEVELS.forEach((l,i)=>{const b=document.createElement('button');b.className='lvl';b.innerHTML=`<div class="no">${l.no}</div><h4>${l.name}</h4><div class="sub">${l.title}</div><span class="stage">${l.stage}</span><div class="more">See what's included →</div>`;b.onclick=()=>select(i);row.appendChild(b);});
-function select(i){document.querySelectorAll('.lvl').forEach((el,idx)=>el.classList.toggle('active',idx===i));const l=LEVELS[i];const inclHTML=l.incl.map((x,xi)=>{const clk=x[3]?` incl-click" onclick="openEx(${i},${xi})`:'';const cue=x[3]?'<span class="ex-cue">Open →</span>':'';return `<div class="incl-item${clk}"><div class="ic">${x[0]}</div><div style="flex:1"><b>${x[1]}</b><span>${x[2]}</span></div>${cue}</div>`;}).join('');detail.innerHTML=`<div class="detail-head"><div class="no">Level ${l.no} · ${l.stage}</div><h3>${l.name} — ${l.title}</h3><p>${l.intent}</p></div><div class="detail-body"><div><div class="lvl-expl">${l.desc}</div><div class="lvl-means"><b>What this level means</b><ul>${l.means.map(m=>`<li>${m}</li>`).join('')}</ul></div><div class="need-box"><b>What you need most now</b>${l.need.join(' · ')}</div><div class="avoid-box"><b>What to avoid</b>${l.avoid}</div><div class="promise-box"><b>Our promise</b>“${l.promise}”</div></div><div class="incl"><h5>This level's content pack${l.incl[0][3]?' · tap any item':''}</h5><div class="incl-list">${inclHTML}</div></div></div>`;detail.classList.add('show');}
-function openEx(li,xi){const it=LEVELS[li].incl[xi];document.getElementById('exBarTitle').textContent=LEVELS[li].name+' · '+it[1];document.getElementById('exBody').innerHTML=`<div class="sit-head"><div class="em">${it[0]}</div><h3>${it[1]}</h3></div>${it[3]}`;document.getElementById('exFoot').innerHTML=`<button class="pm-btn ghost" onclick="closeEx()">Close</button><button class="pm-btn primary" onclick="closeEx()">Got it</button>`;document.getElementById('exOv').classList.add('show');document.body.style.overflow='hidden';}
+function select(i){document.querySelectorAll('.lvl').forEach((el,idx)=>el.classList.toggle('active',idx===i));const l=LEVELS[i];const pairs=l.incl.map((x,xi)=>({x,xi}));let affText='';const af=pairs.findIndex(p=>p.x[1]==='Affirmation');if(af>=0){affText=pairs[af].x[2];pairs.splice(af,1);}const as=pairs.findIndex(p=>p.x[1]==='Assessment');if(as>0){pairs.unshift(pairs.splice(as,1)[0]);}const inclHTML=pairs.map(({x,xi})=>{const clk=x[3]?` incl-click" onclick="openEx(${i},${xi})`:'';const cue=x[3]?'<span class="ex-cue">Open →</span>':'';return `<div class="incl-item${clk}"><div class="ic">${x[0]}</div><div style="flex:1"><b>${x[1]}</b><span>${x[2]}</span></div>${cue}</div>`;}).join('');detail.innerHTML=`<div class="detail-head"><div class="no">Level ${l.no} · ${l.stage}</div><h3>${l.name} — ${l.title}</h3><p>${l.intent}</p></div><div class="detail-body"><div><div class="lvl-expl">${l.desc}</div><div class="lvl-means"><b>What this level means</b><ul>${l.means.map(m=>`<li>${m}</li>`).join('')}</ul></div><div class="need-box"><b>What you need most now</b>${l.need.join(' · ')}</div><div class="avoid-box"><b>What to avoid</b>${l.avoid}</div><div class="promise-affirm"><b>Our promise · affirmation</b>“${l.promise}”<br><span>${affText}</span></div></div><div class="incl"><h5>This level's content pack${l.incl[0][3]?' · tap any item':''}</h5><div class="incl-list">${inclHTML}</div></div></div>`;detail.classList.add('show');}
+function openEx(li,xi){const it=LEVELS[li].incl[xi];document.getElementById('exBarTitle').textContent=LEVELS[li].name+' · '+it[1];document.getElementById('exBody').innerHTML=`<div class="sit-head"><div class="em">${it[0]}</div><h3>${it[1]}</h3></div>${it[3]}`;let tryBtn=`<button class="pm-btn primary" onclick="closeEx()">Got it</button>`;if(LEVELS[li].no==='02'&&it[1]==='Awareness practice')tryBtn=`<button class="pm-btn primary" onclick="closeEx();openBoil()">▶ Try this exercise</button>`;if(LEVELS[li].no==='02'&&it[1]==='Assessment')tryBtn=`<button class="pm-btn primary" onclick="closeEx();openTS()">▶ Try this assessment</button>`;if(LEVELS[li].no==='02'&&it[1]==='Reflection practice')tryBtn=`<button class="pm-btn primary" onclick="closeEx();openFear()">▶ Try this exercise</button>`;if(LEVELS[li].no==='02'&&it[1]==='Action practice')tryBtn=`<button class="pm-btn primary" onclick="closeEx();openAch()">▶ Try this exercise</button>`;document.getElementById('exFoot').innerHTML=`<button class="pm-btn ghost" onclick="closeEx()">Close</button>${tryBtn}`;document.getElementById('exOv').classList.add('show');document.body.style.overflow='hidden';}
 function closeEx(){document.getElementById('exOv').classList.remove('show');document.body.style.overflow='';}
 document.getElementById('exOv').addEventListener('click',e=>{if(e.target.id==='exOv')closeEx();});
 select(0);
@@ -890,28 +1002,28 @@ const SIT=[
    help:"Career Reset meets people right in <span class='hl'>PAUSE</span> — grounding and nervous-system regulation first, not résumé pressure. PULSE pinpoints where they are; <span class='hl'>RECONNECT</span> rebuilds footing and self-trust; the AI Business Coach helps draft outreach only once they're ready to act."},
   {em:"😮‍💨",title:"Burnout prevention",
    what:"Chronic workplace stress that — left unmanaged — slides into exhaustion, cynicism and reduced capacity. Career Reset is built to catch the early signs and rebuild energy and boundaries before things reach breaking point, rather than waiting for collapse.",
-   stats:[["43%","of employees globally report burnout in 2025, up from 38% in 2023","global workplace surveys"],
-          ["59% / 46%","burnout rate for women vs. men — a gap that has more than doubled since 2019","2024–25 surveys"]],
+   stats:[["8 in 10","workers say they are at risk of burnout this year","Mercer Global Talent Trends, 2024"],
+          ["40%","of employees worldwide feel a lot of stress every day","Gallup, 2025"]],
    help:"The <span class='hl'>Daily Check-in</span> and stressor map (\"what drains me\") surface early-warning signs before crisis. <span class='hl'>RECONNECT</span> restores energy and boundaries, and emotional-regulation tools handle daily load — turning burnout from an exit event into something managed in time."},
   {em:"🌍",title:"Country relocation",
    what:"Rebuilding a professional identity in a new market, language and culture — often as the accompanying \"trailing\" partner whose own career stalls after the move. Title, network and sense of competence can all reset to zero overnight.",
-   stats:[["21%","of accompanying spouses are employed in the host country — though most want to work","Permits Foundation, 2022"],
-          ["85% → 35%","share employed before the move vs. during the assignment","relocation research"]],
+   stats:[["21%","of accompanying partners are employed in the host country — though most want to work","Permits Foundation, 2022"],
+          ["85% → 35%","employed before the move vs. during the assignment","global-mobility surveys"]],
    help:"<span class='hl'>ALIGN</span> re-anchors identity and values independent of job title. <span class='hl'>DESIGN</span> and the Ikigai map translate transferable strengths into new-market hypotheses with small, low-risk experiments — and the Community reduces the isolation that makes relocation so hard."},
   {em:"🍼",title:"Return from parental leave",
    what:"Re-entering work with a changed sense of self, shifted priorities and dented confidence — often into a reduced role or an impossible juggle. Many never make it back to their original job.",
-   stats:[["~43%","of new mothers never return to their original role after maternity leave (US)","2024 data"],
-          ["79%","of those who return full-time end up leaving; only 24% regain pre-leave hours","Careers After Babies"]],
+   stats:[["43%","of new mothers never return to their pre-baby role","Careers After Babies, 2023"],
+          ["Just 24%","return full-time — and 79% of them end up leaving anyway","Careers After Babies, 2023"]],
    help:"<span class='hl'>RECONNECT</span> rebuilds self-trust and routine; <span class='hl'>ALIGN</span> clarifies new priorities and an authentic identity beyond the old role; <span class='hl'>DESIGN</span> crafts a realistic, values-aligned plan — including the boundaries that make the return sustainable."},
   {em:"🪑",title:"Leaving on retirement",
    what:"The \"identity retirement\" few prepare for — when the question shifts from <em>what do you do</em> to <em>who are you without the doing</em>. Loss of routine, purpose and built-in social belonging often hits harder than the financial side.",
-   stats:[["~40%","higher probability of clinical depression after retirement","IEA study"],
-          ["20.5%","of retirees say they simply weren't prepared for the emotional shift","2025 retirement study"]],
+   stats:[["~31%","higher risk of depression after an involuntary or forced retirement","meta-analysis of longitudinal studies"],
+          ["~40%","higher likelihood of depression in retirement overall","IEA · Work Longer, Live Healthier"]],
    help:"<span class='hl'>PAUSE</span> and <span class='hl'>RECONNECT</span> hold the emotional transition; <span class='hl'>ALIGN</span> rediscovers identity and purpose beyond the job; <span class='hl'>DESIGN</span> and Ikigai shape a meaningful next chapter — encore work, contribution or a new rhythm of living."},
   {em:"🔁",title:"Job stagnation",
    what:"Stuck and quietly disengaged — sensing the old role no longer fits but unsure what's next. This is the \"quiet quitting\" zone: still showing up, but checked out, and slowly losing confidence to move.",
-   stats:[["62%","of employees globally are \"not engaged\" at work; another 15% actively disengaged","Gallup, 2024"],
-          ["69%","of professionals changed or considered changing careers in the past year","FlexJobs, 2024"]],
+   stats:[["Only 20%","of employees worldwide are engaged at work — the rest are checked out (a record low)","Gallup, 2025"],
+          ["69%","of professionals changed or considered changing careers in the past year","FlexJobs, 2025"]],
    help:"PULSE names the stuckness instead of letting it drift. <span class='hl'>ALIGN</span> surfaces the authenticity gap behind it; <span class='hl'>DESIGN</span> and Ikigai turn restlessness into one or two concrete directions to test — building momentum without a reckless leap."}
 ];
 
@@ -976,15 +1088,6 @@ const FEAT=[
    ],
    help:"Comparing Level 1 to today reveals the whole distance travelled — a motivating moment for the user, and a ready-made starting point for any coaching session."},
 
-  {em:"🎯",title:"Ikigai Direction Map",
-   what:"Ikigai is a way to connect four things — what you love, what you're good at, what the world needs, and what you can be paid for — and turn the overlap into a real career direction.",
-   blocks:[
-     ["The four lenses",`<div class="fgrid2"><div class="fcard"><b>❤️ What you love</b><span>Energizers, interests</span></div><div class="fcard"><b>💪 What you're good at</b><span>Strengths, proof</span></div><div class="fcard"><b>🌍 What the world needs</b><span>Problems you care about</span></div><div class="fcard"><b>💶 What you can be paid for</b><span>Marketable skills</span></div></div>`],
-     ["What it produces",`<ul class="flist"><li>Personal Profile Card — values, strengths, energizers, boundaries</li><li>Direction Map — top themes + one or two role / industry hypotheses</li><li>A 7–14 day experiment plan to test each hypothesis</li><li>A weekly alignment tracker (Love / Good at / Paid / Needs)</li></ul>`],
-     ["Good to know",`<div class="fdisc">Ikigai is actually one of the <strong>assessments inside the DESIGN level</strong> rather than a standalone feature — it's shown here for visibility.</div>`]
-   ],
-   help:"It converts a vague “I need a change” into one or two concrete directions a person can actually test — without a reckless leap."},
-
   {em:"🔮",title:"Human Design for Career",
    what:"Human Design is a self-reflection system that turns birth data into a simple “operating manual” — how a person is wired to use energy, make decisions and do their best work. In Career Reset it's used purely for coaching and self-understanding.",
    blocks:[
@@ -994,13 +1097,21 @@ const FEAT=[
    ],
    help:"It gives people language for how they naturally operate — reducing self-judgement and helping them design a path that fits their real nature."},
 
-  {em:"📅",title:"Coaching &amp; Library",
-   what:"Two ways the app connects daily self-work to outside support and inspiration.",
+  {em:"📚",title:"Library &amp; recommendations",
+   what:"A curated shelf of talks, books and resources — recommended to match exactly where each person is in their journey.",
    blocks:[
-     ["Book a coaching session",`<p style="font-size:14px;color:var(--muted);line-height:1.55">Live human coaching, booked from inside the app and fuelled by the user's own assessment results — so the coach starts with real context, not a blank page. Ideal for partners who already offer coaching or outplacement.</p>`],
-     ["Full Library",`<p style="font-size:14px;color:var(--muted);line-height:1.55">A curated shelf of TED talks and books matched to each level — so the right idea shows up at the right moment in the journey.</p>`]
+     ["What's inside",`<ul class="flist"><li>Hand-picked talks, books and articles for each stage</li><li>Personalised to the user's current level and situation</li><li>Short and relevant — never an overwhelming reading list</li></ul>`],
+     ["Why it lands",`<p style="font-size:14px;color:var(--muted);line-height:1.55">The right idea at the right moment. People get inspiration that actually fits where they are — not a generic list they'll scroll past.</p>`]
    ],
-   help:"The app does the daily emotional work; coaching and the library add depth and human connection when they matter most."}
+   help:"Small, well-timed nudges of insight keep momentum going and deepen each stage of the journey."},
+
+  {em:"📅",title:"Book a career coach",
+   what:"When self-guided work isn't enough, users can book a live session with a career or life coach — right from inside the app.",
+   blocks:[
+     ["How it works",`<ul class="flist"><li>Booked from inside the app in a couple of taps</li><li>Fuelled by the user's own assessment results — the coach starts with real context, not a blank page</li><li>Available whenever someone wants a human alongside the app</li></ul>`],
+     ["Great for partners",`<p style="font-size:14px;color:var(--muted);line-height:1.55">Ideal for HR teams and outplacement agencies that already offer coaching — plug your own coaches in, and the app does the daily work between sessions.</p>`]
+   ],
+   help:"The app carries people day to day; a human coach adds depth and accountability at the moments that matter most."}
 ];
 
 function openFeat(i){
@@ -1046,6 +1157,539 @@ function openShot(i){shotI=i;document.getElementById('lbImg').src=UISHOTS[i];doc
 function closeShot(){document.getElementById('lightbox').classList.remove('show');}
 function navShot(d){shotI=(shotI+d+UISHOTS.length)%UISHOTS.length;document.getElementById('lbImg').src=UISHOTS[shotI];}
 document.addEventListener('keydown',e=>{if(!document.getElementById('lightbox').classList.contains('show'))return;if(e.key==='Escape')closeShot();if(e.key==='ArrowRight')navShot(1);if(e.key==='ArrowLeft')navShot(-1);});
+
+/* ===================== BOILING EXERCISE DEMO ===================== */
+// Each card: [text, situationTag(backstage), {value:weight,...}(backstage)]
+// Values: fair=fairness, resp=respect, recg=recognition, free=freedom, stab=stability,
+// grow=growth, mean=meaning, belg=belonging, auto=autonomy, secu=security, hone=honesty, crea=creativity
+const BOIL_ITEMS=[
+ ["…that I'm stuck in place","stagnation",{grow:2,free:1}],
+ ["…that time is slipping away","stagnation·retirement",{mean:2,grow:1}],
+ ["…the unfairness of what happened","dismissal",{fair:3}],
+ ["…that I've been forgotten","dismissal·maternity",{belg:2,recg:1}],
+ ["…that everything starts over again","relocation",{stab:2,secu:1}],
+ ["…that I feel like a stranger here","relocation",{belg:3}],
+ ["…that I fell behind while I was away","maternity",{grow:2,recg:1}],
+ ["…that I'm burned out, nothing left","burnout",{stab:1,mean:1,secu:1}],
+ ["…at myself — for fear and delay","all",{hone:1,grow:1,auto:1}],
+ ["…that this chapter ended at all","retirement·dismissal",{mean:2,stab:1}],
+ ["…that nobody asked me","dismissal·relocation",{resp:2,auto:2}],
+ ["…that my experience suddenly counts for nothing","dismissal·maternity",{recg:3}],
+ ["…that I did everything right — and it still happened","dismissal·burnout",{fair:2,mean:1}],
+ ["…that I have to smile when I feel awful","all",{hone:3}],
+ ["…that others seem settled while I'm not","all",{recg:1,stab:1,belg:1}],
+ ["…that I've lost control over my own life","all",{auto:3}],
+ ["…that people expect me to bounce back quickly","all",{resp:2,hone:1}],
+ ["…that I might become a burden to those close to me","dismissal·retirement",{auto:2,belg:1}],
+ ["…that I gave so much and got so little back","burnout",{fair:2,recg:2}],
+ ["…at the situation — there's simply no one to blame","all",{auto:1,fair:1,mean:1}],
+ ["…that I'm ashamed to tell people what happened","dismissal",{belg:2,recg:1}],
+ ["…that I feel guilty toward my family","all",{secu:2,belg:1}],
+ ["…at those who decided my fate without knowing me","dismissal",{resp:2,fair:2}],
+ ["…that my loyalty meant nothing in the end","dismissal·burnout",{fair:2,belg:2}],
+ ["…that I ignored the warning signs for so long","burnout",{hone:2,auto:1}],
+ ["…that everyone gives advice and nobody just listens","all",{resp:2,belg:1}],
+ ["…that I have to prove myself all over again","maternity·relocation",{recg:2,resp:1}],
+ ["…that my age is suddenly a topic","retirement·dismissal",{resp:2,fair:1}],
+ ["…that money now decides what I can choose","all",{free:2,secu:2}],
+ ["…that I envy people who seem to know what they want","all",{mean:2,auto:1}],
+ ["…that home doesn't feel like home anymore","relocation",{belg:2,stab:2}],
+ ["…that I'm invisible in rooms where I used to matter","maternity·retirement",{recg:2,resp:1}],
+ ["…that my calendar is empty — and it frightens me","dismissal·retirement",{mean:2,stab:1}],
+ ["…that I keep replaying conversations I can't change","all",{fair:1,hone:1,auto:1}],
+ ["…that no one from work has even called","dismissal",{belg:2,resp:1}],
+ ["…that I built my identity around something that's gone","all",{mean:3}],
+ ["…that being 'strong' is expected of me around the clock","all",{hone:2,resp:1}],
+ ["…that the future used to be a plan and now it's blank","all",{secu:2,mean:1}],
+ ["…that I said yes for years when I wanted to say no","burnout·stagnation",{auto:2,hone:2}],
+ ["…that I don't recognise myself lately","all",{hone:2,mean:1}]
+];
+const VAL_META={fair:"fairness",resp:"respect",recg:"recognition",free:"freedom",stab:"stability",grow:"growth",mean:"meaning",belg:"belonging",auto:"autonomy",secu:"security",hone:"honesty",crea:"creativity"};
+const VAL_TEXTS={
+ fair:"Fairness — your feelings flare where things are decided unjustly. You need the rules of the game to be honest, and you notice instantly when they aren't.",
+ resp:"Respect — being treated as a person whose voice counts. Much of what stung was about being talked over, decided for, or rushed.",
+ recg:"Recognition — your contribution being seen and valued. Invisibility and devaluation hit you harder than difficulty itself.",
+ free:"Freedom — room to choose. When circumstances narrow your options, it registers as a direct hit.",
+ stab:"Stability — solid ground underfoot. Sudden resets and uncertainty cost you more energy than hard work ever did.",
+ grow:"Growth — movement and development. Standing still, falling behind, wasted time: these sting because growth is oxygen for you.",
+ mean:"Meaning — knowing what it's all for. When purpose disappears, everything else loses taste; much of your pain is meaning-shaped.",
+ belg:"Belonging — being part of something, being welcome. Exclusion, strangeness and silence from others wound you deeply.",
+ auto:"Autonomy — steering your own life. Losing control, being decided for, saying yes against your will — these violate something core in you.",
+ secu:"Security — knowing you and yours are protected. Financial and future uncertainty presses on you harder than on most.",
+ hone:"Honesty — being real, with others and with yourself. Pretending, masking and self-betrayal exhaust you more than conflict would.",
+ crea:"Creativity — space to make something your own. Routine that leaves no room for it slowly drains you."};
+let B={step:0,idx:0,ans:{},};
+function openBoil(){B={step:0,idx:0,ans:{},sel:null};document.getElementById('boilOv').classList.add('show');document.body.style.overflow='hidden';renderBoil();}
+function boilPick(v){B.ans[B.idx]=v;B.idx++;renderBoil();}
+function boilBack(){if(B.idx>0){B.idx--;}else{B.step=0;}renderBoil();}
+function closeBoil(){document.getElementById('boilOv').classList.remove('show');document.body.style.overflow='';}
+document.getElementById('boilOv').addEventListener('click',e=>{if(e.target.id==='boilOv')closeBoil();});
+function boilValues(){
+  const sc={},mx={};Object.keys(VAL_META).forEach(k=>{sc[k]=0;mx[k]=0;});
+  BOIL_ITEMS.forEach(it=>Object.entries(it[2]).forEach(([k,wt])=>mx[k]+=wt));
+  Object.entries(B.ans).forEach(([i,v])=>{
+    const w=BOIL_ITEMS[+i][2];const amp=(v-1)/4; // 1→0, 5→1
+    Object.entries(w).forEach(([k,wt])=>sc[k]+=wt*amp);
+  });
+  // normalize: share of each value's own maximum, so "wide" values don't drown "narrow" ones
+  Object.keys(sc).forEach(k=>sc[k]=mx[k]?sc[k]/mx[k]:0);
+  return sc;
+}
+function radarSVG(sc){
+  const keys=Object.keys(VAL_META);
+  const max=Math.max(...keys.map(k=>sc[k]),0.001);
+  const cx=150,cy=140,R=100,n=keys.length;
+  const pt=(i,r)=>{const a=-Math.PI/2+i*2*Math.PI/n;return [cx+r*Math.cos(a),cy+r*Math.sin(a)];};
+  let rings='';[0.33,0.66,1].forEach(f=>{rings+='<polygon points="'+keys.map((k,i)=>pt(i,R*f).join(',')).join(' ')+'" fill="none" stroke="#DCE4DA" stroke-width="1"/>';});
+  let axes='',labels='';
+  keys.forEach((k,i)=>{const [x,y]=pt(i,R);axes+=`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#E4E9E2" stroke-width="1"/>`;
+    const [lx,ly]=pt(i,R+16);labels+=`<text x="${lx}" y="${ly}" font-size="9.5" fill="#5A6B5D" text-anchor="middle" dominant-baseline="middle">${VAL_META[k]}</text>`;});
+  const shape='<polygon points="'+keys.map((k,i)=>pt(i,R*(sc[k]/max)).join(',')).join(' ')+'" fill="rgba(62,124,90,0.18)" stroke="var(--green-d)" stroke-width="2"/>';
+  return `<svg viewBox="0 0 300 285" style="width:100%;max-width:340px;display:block;margin:8px auto">${rings}${axes}${shape}${labels}</svg>`;
+}
+function renderBoil(){
+  const body=document.getElementById('boilBody'),foot=document.getElementById('boilFoot');
+  if(B.step===0){
+    document.getElementById('boilProg').style.width='0%';
+    body.innerHTML=`<div class="pm-step">Level 2 · Awareness practice · ~3 minutes</div>
+      <h3>What's boiling inside</h3>
+      <p>Here you can be honest: anger, resentment, irritation, disappointment — whatever you feel has a right to be here. Nobody will see this.</p>
+      <p>One card at a time: rate how much each one stings, from <em>not at all</em> to <em>a lot</em>. At the end, the app reads your answers and <strong>shows you which values your feelings are guarding</strong> — you don't pick them; they emerge.</p>
+      <div class="pm-note">Live demo — taps only, nothing is saved.</div>`;
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="closeBoil()">Close</button><button class="pm-btn primary" onclick="B.step=1;B.idx=0;renderBoil()">Start →</button>`;
+    return;
+  }
+  if(B.step===1){
+    const i=B.idx;
+    if(i>=BOIL_ITEMS.length){B.step=2;renderBoil();return;}
+    document.getElementById('boilProg').style.width=(i/BOIL_ITEMS.length*100)+'%';
+    const cur=B.ans[i];
+    body.innerHTML=`<div class="pm-step">Card ${i+1} of ${BOIL_ITEMS.length}</div>
+      <div class="pm-q" style="min-height:120px;display:flex;align-items:center;font-size:21px">${BOIL_ITEMS[i][0]}</div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:6px">How much does this sting?</p>
+      <div class="pm-scale">${[1,2,3,4,5].map(v=>`<div class="pm-dot ${cur===v?'sel':''}" data-v="${v}"><span class="glyph">${['○','◔','◑','◕','●'][v-1]}</span><span class="lbl">${v===1?'Not at all':v===3?'Somewhat':v===5?'A lot':''}</span></div>`).join('')}</div>`;
+    body.querySelectorAll('.pm-dot').forEach(el=>el.onclick=()=>{boilPick(+el.dataset.v);});
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="boilBack()">← Back</button><span style="font-size:12px;color:var(--muted)">Tap a circle to continue</span>`;
+    return;
+  }
+  // ===== RESULT: computed values + radar + themes/direction =====
+  document.getElementById('boilProg').style.width='100%';
+  const sc=boilValues();
+  const ranked=Object.keys(sc).sort((a,b)=>sc[b]-sc[a]);
+  const top=ranked.slice(0,3).filter(k=>sc[k]>0);
+  const valPara=top.map(k=>`<b>${VAL_META[k].charAt(0).toUpperCase()+VAL_META[k].slice(1)}.</b> ${VAL_TEXTS[k].split(' — ')[1]}`).join('<br><br>');
+  // themes & direction reuse (weights: rating>=3 counts)
+  const strong=Object.entries(B.ans).filter(([i,v])=>v>=3).map(([i])=>+i);
+  const THEMES={
+    inj:{idx:[2,10,11,12,18,22,23,27],label:"The unfairness of it",text:"Your loudest note is injustice — being judged, devalued, decided for. That anger is healthy: it defends dignity. We'll convert it into standards for how the next chapter treats you."},
+    self:{idx:[8,17,20,21,24,33,38],label:"The voice turned on yourself",text:"A share of the heat points at yourself — guilt, shame, replaying. This is the most corrosive direction; the Achievement Bank answers it with facts."},
+    comp:{idx:[6,14,29],label:"Comparison and falling behind",text:"Comparison stings — others seem ahead. It's pain asking 'where is my place?'; the answer comes from mapping what's genuinely yours."},
+    loss:{idx:[3,5,9,30,31,32,34,35,39],label:"Loss of identity and belonging",text:"The deepest note is loss — of belonging, identity, being seen. A real chapter ended; grief for a role is real grief."},
+    power:{idx:[0,1,4,15,19,26,28,37],label:"Control slipping away",text:"The core feeling is lost control. It returns in small concrete pieces — next, we'll split what depends on you from what doesn't."},
+    press:{idx:[13,16,25,36],label:"Pressure to perform",text:"Much of the load is pressure to smile, be strong, bounce back on schedule. Those are other people's timelines — this journey sides with yours."}};
+  const tCounts=Object.values(THEMES).map(t=>({label:t.label,text:t.text,n:strong.filter(i=>t.idx.includes(i)).length})).filter(t=>t.n>0).sort((a,b)=>b.n-a.n);
+  const themePara=tCounts.slice(0,2).map(t=>`<b>${t.label}.</b> ${t.text}`).join('<br><br>');
+  const IN=new Set([6,8,14,17,20,21,24,29,32,33,35,38,39]),OUT=new Set([2,3,10,11,13,16,18,22,23,25,27,31,34,36]);
+  const nIn=strong.filter(i=>IN.has(i)).length,nOut=strong.filter(i=>OUT.has(i)).length,nSit=strong.length-nIn-nOut;
+  let dir;
+  if(nIn>=nOut&&nIn>=nSit)dir="Most of the heat points <strong>inward, at yourself</strong> — the direction self-compassion was built for. The Achievement Bank will answer this voice with evidence.";
+  else if(nOut>=nIn&&nOut>=nSit)dir="Most of the heat points <strong>outward</strong> — at people and decisions. Good news: outward anger converts well into boundaries, and that's next level's work.";
+  else dir="The heat points at <strong>the situation itself</strong> — lost ground and control. That calls for stabilising moves, not blame.";
+  if(!B.sel)B.sel=new Set(top);
+  const runners=ranked.slice(3,7).filter(k=>sc[k]>0);
+  const chip=(k,on)=>`<div class="pm-choice ${on?'sel':''}" data-k="${k}" style="flex:0 0 auto;padding:9px 15px">${VAL_META[k]}</div>`;
+  const selPara=[...B.sel].map(k=>`<b>${VAL_META[k].charAt(0).toUpperCase()+VAL_META[k].slice(1)}.</b> ${VAL_TEXTS[k].split(' — ')[1]}`).join('<br><br>');
+  body.innerHTML=`<div class="pm-step">Result · what your answers reveal</div>
+    <h3>Here's what your feelings are guarding</h3>
+    <p style="font-size:13.5px;color:var(--muted)">You didn't choose these — they emerged from how the cards landed.</p>
+    ${radarSVG(sc)}
+    <div class="pm-note"><b>Does this ring true?</b> The app suggests your three loudest values below. Tap to un-select any that doesn't resonate — and pick a replacement from the next candidates. Your corrections are as telling as the scores.</div>
+    <p style="font-size:12px;color:var(--muted);margin:10px 0 4px">Suggested by your answers:</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">${top.map(k=>chip(k,B.sel.has(k))).join('')}</div>
+    <p style="font-size:12px;color:var(--muted);margin:10px 0 4px">Next candidates:</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">${runners.map(k=>chip(k,B.sel.has(k))).join('')}</div>
+    <div class="pm-note" style="margin-top:12px"><b>Your values.</b><br><br>${selPara||'Select up to three above.'}</div>
+    <div class="pm-note" style="margin-top:10px">${themePara}<br><br><b>Where it points.</b> ${dir}</div>
+    <p style="margin-top:10px;font-size:13px;color:var(--muted)">In the app: confirmed values are saved to <strong>My Space → My Values</strong> (the computed profile is kept backstage — the gap between them feeds the AI coach). At Level 3 they become boundaries; at Level 4 they shape the new role.</p>`;
+  body.querySelectorAll('.pm-choice').forEach(el=>el.onclick=()=>{const k=el.dataset.k;if(B.sel.has(k))B.sel.delete(k);else if(B.sel.size<3)B.sel.add(k);renderBoil();});
+  foot.innerHTML=`<button class="pm-btn ghost" onclick="B={step:1,idx:0,ans:{},sel:null};renderBoil()">↺ Restart</button><button class="pm-btn primary" onclick="closeBoil()">Done</button>`;
+}
+/* ===================== TRUE SELF ASSESSMENT DEMO ===================== */
+// [text, dimension, reversed] — dimensions & reversal are backstage only
+const TS_Q=[
+ ["I understand what truly matters to me — regardless of any job title","ts",false],
+ ["There's something I've wanted for a long time but keep forbidding myself to consider","sd",false],
+ ["Lately, an interest in something is waking up in me","mr",false],
+ ["My current or former role poorly reflects who I am","ag",false],
+ ["I find it hard to relax even when I get the chance","rs",false],
+ ["I can tell my own wishes apart from other people's expectations","ts",false],
+ ["I catch myself dreaming, then cutting it off as 'not serious'","sd",false],
+ ["Moments of 'what if…' keep flashing by","mr",false],
+ ["I often had to play a version of myself that wasn't real","ag",false],
+ ["Looping thoughts get in the way of sleep or focus","rs",false],
+ ["Even now, I can feel some inner ground under me","ts",false],
+ ["Sometimes I envy people who live or work differently than I do","sd",false],
+ ["Sometimes I feel a quiet curiosity about something new","mr",false],
+ ["I frequently did what was expected rather than what I wanted","ag",false],
+ ["I react faster than I can think","rs",false],
+ ["Without my role or job, I hardly know who I am","ts",true],
+ ["There's a part of me that hasn't had a place in my life for a long time","sd",false],
+ ["Right now, nothing genuinely interests me","mr",true],
+ ["My work and I are largely one and the same","ag",true],
+ ["My body tires faster than usual","rs",false],
+ ["I can name a few things I want next — even small ones","ts",false],
+ ["If money didn't matter, I know exactly what I would try","sd",false],
+ ["I catch myself reading or watching things about a new field","mr",false],
+ ["Success, as I chased it, was mostly someone else's definition","ag",false],
+ ["I postpone even simple decisions more than usual","rs",false],
+ ["When it's quiet, I can hear my own opinion — not just other people's voices","ts",false],
+ ["I keep postponing one particular dream 'until things settle'","sd",false],
+ ["Certain topics light me up noticeably faster than others","mr",false],
+ ["At work I edited my opinions to fit what felt safe","ag",false],
+ ["Small things set me off more than they used to","rs",false],
+ ["Lately my decisions feel like someone else is making them","ts",true],
+ ["Some of my interests feel 'not allowed' for someone my age or position","sd",false],
+ ["Ideas of 'maybe I could…' come more often than a month ago","mr",false],
+ ["People who know me outside work would barely recognise my work persona","ag",false],
+ ["I feel the tension in my body — jaw, shoulders, stomach","rs",false],
+ ["I know which activities feel like me, whatever the title says","ts",false],
+ ["There's a version of my life I only visit in daydreams","sd",false],
+ ["Thinking about the future only makes me tired","mr",true],
+ ["I rarely had to pretend at work","ag",true],
+ ["Mostly, I feel calm about my situation","rs",true]
+];
+const TS_DIMS={ts:"Contact with yourself",sd:"Muted wishes",mr:"Interest waking up",ag:"Gap with the old role"};
+const TS_SCALE=[["○","Not me"],["◔",""],["◑","Partly"],["◕",""],["●","Exactly me"]];
+let T={i:-1,a:Array(TS_Q.length).fill(null)};
+function openTS(){T={i:-1,a:Array(TS_Q.length).fill(null)};document.getElementById('tsOv').classList.add('show');document.body.style.overflow='hidden';renderTS();}
+function closeTS(){document.getElementById('tsOv').classList.remove('show');document.body.style.overflow='';}
+document.getElementById('tsOv').addEventListener('click',e=>{if(e.target.id==='tsOv')closeTS();});
+function tsScore(dim){const idx=TS_Q.map((q,i)=>q[1]===dim?i:-1).filter(i=>i>=0);let s=0;idx.forEach(i=>{let v=T.a[i];if(TS_Q[i][2])v=6-v;s+=v;});return Math.round(s/idx.length*20);}
+function renderTS(){
+  const body=document.getElementById('tsBody'),foot=document.getElementById('tsFoot');
+  const done=T.a.filter(x=>x!==null).length;
+  document.getElementById('tsProg').style.width=(done/TS_Q.length*100)+'%';
+  if(T.i===-1){
+    body.innerHTML=`<div class="pm-step">Level 2 · Assessment · ~4 minutes</div>
+      <h3>True Self / Identity Reconnection</h3>
+      <p>Not a test with grades — a mirror of your state. <strong>40 statements</strong>, each tapped on a 1–5 scale shown as circles. Reversed items are mixed in so answers stay honest.</p>
+      <p>Four scores come out — contact with yourself, muted wishes, interest waking up, and the gap with your old role — plus a layered personal summary: your emotional tone, your leading signals, and what their <em>combination</em> says about where you are.</p>
+      <div class="pm-note">Live demo — nothing is saved.</div>`;
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="closeTS()">Close</button><button class="pm-btn primary" onclick="T.i=0;renderTS()">Start →</button>`;
+    return;
+  }
+  if(T.i<TS_Q.length){
+    const q=TS_Q[T.i];
+    body.innerHTML=`<div class="pm-step">Statement ${T.i+1} of ${TS_Q.length}</div>
+      <div class="pm-q">${q[0]}</div>
+      <div class="pm-scale">${TS_SCALE.map((s,k)=>`<div class="pm-dot ${T.a[T.i]===k+1?'sel':''}" data-v="${k+1}"><span class="glyph">${s[0]}</span><span class="lbl">${s[1]}</span></div>`).join('')}</div>`;
+    body.querySelectorAll('.pm-dot').forEach(el=>el.onclick=()=>{T.a[T.i]=+el.dataset.v;setTimeout(()=>{T.i++;renderTS();},160);});
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="T.i=Math.max(-1,T.i-1);renderTS()">← Back</button><span style="font-size:12px;color:var(--muted)">Tap a circle to continue</span>`;
+    return;
+  }
+  // RESULT — layered
+  document.getElementById('tsProg').style.width='100%';
+  const S={ts:tsScore('ts'),sd:tsScore('sd'),mr:tsScore('mr'),ag:tsScore('ag'),rs:tsScore('rs')};
+  const bars=['ts','sd','mr','ag'].map(d=>{
+    const v=S[d];let note='';
+    if(d==='ts')note=v<=40?"Connection with yourself is weakened right now — typical for this period.":v<=70?"The connection is there, but still uneven.":"You sense what matters to you quite well.";
+    if(d==='sd')note=v<=40?"Hidden wishes seem quiet for now — or still silent.":v<=70?"Wishes are ripening that you haven't given a voice yet.":"A lot lives in you that has long asked to come out.";
+    if(d==='mr')note=v<=40?"Interest is dimmed for now — normal, strength is still returning.":v<=70?"Something is starting to catch your attention again.":"Interest in the new is clearly waking up.";
+    if(d==='ag')note=v<=40?"Your role felt fairly organic to you.":v<=70?"Some of your role was never quite you.":"The role seems to have grown tight long ago.";
+    return `<div style="margin-bottom:13px"><div style="display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:4px"><b>${TS_DIMS[d]}</b><span>${v}</span></div><div style="height:8px;background:#E4E9E2;border-radius:4px"><div style="height:8px;width:${v}%;background:var(--green-d);border-radius:4px"></div></div><div style="font-size:12.5px;color:var(--muted);margin-top:3px">${note}</div></div>`;
+  }).join('');
+  // Layer 1 — emotional tone (by resistance)
+  const tone = S.rs>=61 ? "Your system is running hot — body and mind aren't letting go of the tension. That's not weakness; it's the cost of what you're carrying. This level's practices are built to discharge it safely."
+             : S.rs>=41 ? "Tension is still there, but it no longer floods everything — you can watch it now, not only be it."
+             : "Your system is exhaling. The sharpest strain seems to be easing — you can listen to yourself more calmly.";
+  // Layer 2 — leading signals (top two of sd/mr/ag)
+  const sigTexts={
+    sd:{hi:"There are wishes in you that haven't had the right to a voice for a long time. Don't decide anything yet — just acknowledge they exist.",
+        mid:"Some quiet wishes are stirring under the surface — worth noticing without pressure."},
+    mr:{hi:"Interest is waking up in you — the first sign of coming up from the bottom. Don't rush it, and don't put it out.",
+        mid:"Curiosity flickers here and there. Let it choose its own pace."},
+    ag:{hi:"Your role seems to have grown tight long ago. A painful but valuable discovery — we'll go deeper into it at the next level.",
+        mid:"Parts of the old role fit you; parts clearly didn't. That split is worth mapping."}};
+  const ranked=['sd','mr','ag'].sort((a,b)=>S[b]-S[a]);
+  const s1=ranked[0], s2=ranked[1];
+  const sigPara = (S[s1]>=61?sigTexts[s1].hi:sigTexts[s1].mid) + " " + (S[s2]>=61?sigTexts[s2].hi:"");
+  // Layer 3 — named psychological state (checked in order, first match wins)
+  let stName="Mixed weather", combo="Signals point in different directions — which is the honest shape of most real transitions. Nothing here needs fixing; it needs watching. Repeat the scan in a week: patterns show themselves in the arrows, not in single snapshots.";
+  if(S.ts<=40&&S.mr<=40&&S.rs>=60){stName="Frozen ground";combo="Your system has pulled into protective shutdown: the line to yourself is faint, interest is dimmed, tension is high. This isn't apathy and it isn't failure — it's how a psyche protects itself when too much changed too fast. What it asks for: warmth, routine, and zero big decisions. Ground first; the self returns when it's safe to.";}
+  else if(S.rs>=60&&S.sd>=60){stName="Pressure cooker";combo="High tension plus suppressed wishes — pressure from the inside and the outside at once. The danger isn't the wanting; it's the lid. What it asks for: safe valves before any planning — and the practices of this level are exactly that.";}
+  else if(S.ag>=60&&S.sd>=60){stName="The overdue door";combo="The role pinched for a long time, and wishes kept accumulating behind it. This transition isn't an accident — it's a door that was overdue. Expect grief and relief to alternate; both are honest. What it asks for: don't rush into a new room — first honour what the old one cost you.";}
+  else if(S.mr>=60&&S.rs<=40){stName="Spring window";combo="Tension is easing while curiosity wakes — the classic upward turn of the curve. Windows like this reward gentle exploration and punish forced sprints. What it asks for: follow the interest in small steps, and protect your energy from 'catch-up' pressure.";}
+  else if(S.ag>=60&&S.ts<=40){stName="The masked professional";combo="The role was worn so long that, with it gone, the self underneath feels blurred. Nothing is lost — it has just been quiet for years. What it asks for: patient reacquaintance — small preferences, small honesty, and the Achievement Bank's facts instead of self-judgement.";}
+  else if(S.ts>=60&&S.ag>=60){stName="Clear-eyed";combo="You see yourself clearly — and see just as clearly that the role wasn't you. That double clarity is rare this early; for most people it costs months. What it asks for: use it — start naming what stays in your life and what goes.";}
+  else if(S.mr>=60&&S.sd>=60){stName="Restless sprout";combo="Desire and curiosity woke up together — expect restlessness and ten ideas a day. The energy is real; the direction isn't yet. What it asks for: channel it into small experiments, not big leaps, and let patterns emerge before you choose.";}
+  else if(S.ts>=60&&S.rs<=40){stName="Steady rebuild";combo="Ground under your feet and tension easing — you're rebuilding from stability rather than from crisis. What it asks for: don't mistake calm for 'done'. Use it to go deeper while going deeper is cheap.";}
+  body.innerHTML=`<div class="pm-step">Result · a snapshot, not a grade</div>
+    <h3>Here's what's happening inside you right now</h3>
+    <p style="font-size:13.5px;color:var(--muted)">We'll take this snapshot again later — and you'll see how you change.</p>
+    ${bars}
+    <div class="pm-note" style="margin-top:6px"><b>Your state — ${stName}.</b> ${combo}<br><br><b>Your tone.</b> ${tone}<br><br><b>Your leading signals.</b> ${sigPara}</div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:10px">In the app: all four scores go to your Dashboard; repeat runs show ↑↓ arrows against last time.</p>`;
+  foot.innerHTML=`<button class="pm-btn ghost" onclick="T={i:-1,a:Array(TS_Q.length).fill(null)};renderTS()">↺ Restart</button><button class="pm-btn primary" onclick="closeTS()">Done</button>`;
+}
+
+/* ===================== FEAR MAP DEMO ===================== */
+const FEAR_ITEMS=[
+ ["I won't find anything better","comp"],["I can't perform like I used to","comp"],["I've fallen too far behind","comp"],["I don't have the right skills","comp"],["I'll be exposed as less capable than people think","comp"],["I can't learn new things fast enough","comp"],["My profession is disappearing under me","comp"],
+ ["I'll run out of money","secu"],["My family will suffer because of my choices","secu"],["I'll have to settle for less — forever","secu"],["If I slow down, everything will fall apart","secu"],["We'll lose the lifestyle we built","secu"],["One wrong move — and there's no safety net","secu"],
+ ["People will judge me","soc"],["No one will hire someone with my story","soc"],["I'll disappoint the people who believe in me","soc"],["The gap in my CV will speak louder than I do","soc"],["I'll have to explain myself over and over","soc"],["Former colleagues will see me struggle","soc"],
+ ["I'll be stuck here forever","time"],["I'm too old for change","time"],["My best years are behind me","time"],["It's too late to start something real","time"],["I'll spend years just rebuilding what I had","time"],
+ ["I've lost myself and won't come back","iden"],["If I try and fail, it will prove the worst about me","iden"],["Starting over means losing everything I built","iden"],["I'll choose wrong — again","iden"],["Without my title, I don't know who I am","iden"],["I'll betray what I actually care about — again","iden"],
+ ["I won't fit into a new environment","belg"],["I'll always be an outsider there","belg"],["I'll lose the people I worked with","belg"],["Nobody in the new world will know my worth","belg"],
+ ["Out of panic, I'll say yes to the first offer","iden"],["My energy won't come back","comp"],["I'll repeat the same mistakes in a new place","iden"],["The market is worse than everyone admits","secu"],["I'll never feel confident again","comp"],["I'll look back and regret not trying sooner","time"]
+];
+const FEAR_ACTIONS={
+ comp:["Refresh one specific skill this month","List 10 things you did well in the old role (→ Achievement Bank)","Ask two ex-colleagues what they'd hire you for","Do one small real task in the new area","Compare your CV to a real job post — not to your fear"],
+ secu:["Calculate your real runway — the number, not the dread","Draft a bare-minimum budget you could live with","Price the worst case: what would it actually cost?","Build one small buffer this month","Map three income options, even imperfect ones"],
+ soc:["Tell the honest version to one safe person","Write a two-sentence answer to 'what happened?'","Collect three stories of respected people with career gaps","Share one small professional thought publicly","Try to name three people YOU judged for a gap — you can't"],
+ time:["Name three people who started later than you — and made it","Shrink 'the rest of my career' into one next chapter","Talk to someone 10 years older who switched paths","Count the working years actually ahead of you","Do one thing this week future-you will thank you for"],
+ iden:["Write three things that are YOU — with or without the title","Separate: what the role gave you vs. what was always yours","Make one small decision purely by your own criteria","Reread your My Values list — the identity that stays","Run one tiny experiment where failing is safe"],
+ belg:["Show up twice to one community — belonging is built by repetition","Find one person there, not a crowd","Bring one of your own rituals into the new place","Ask a former newcomer how long it really took them","Name what you'd offer a new circle — entry gifts exist"]};
+const FEAR_UNI=["Talk to someone who's been through exactly this","Consciously postpone the decision for two weeks"];
+const FEAR_THEMES={comp:"Competence — your fears cluster around 'can I still do it?'. That's not evidence of decline; it's what a confidence dip feels like from the inside. The Achievement Bank answers it with facts — and one refreshed skill usually silences half of these.",secu:"Security — money and protection carry most of your fear. These fears deserve respect and arithmetic, not mood: real numbers and a timeline shrink them into a plan.",soc:"Others' eyes — much of your fear lives in imagined judgment. Real people judge far less than the inner critic predicts — and the ones who matter don't.",time:"Time and age — 'too late' is the theme. Careers today are built in chapters, not one ladder; the data is on your side more than your fear says.",iden:"Identity — the fear of losing or betraying yourself. Notice: this fear only visits people who care about being real. It's a guardian, not a verdict.",belg:"Belonging — fitting in. New environments always feel like this from the outside; belonging is built by small repeated presence, not granted at the door."};
+function fearOpts(fi){return FEAR_ACTIONS[FEAR_ITEMS[fi][1]].concat(FEAR_UNI);}
+let F={step:0,idx:0,sel:[],sort:{},pick:{}};
+function openFear(){F={step:0,idx:0,sel:[],sort:{},pick:{}};document.getElementById('fearOv').classList.add('show');document.body.style.overflow='hidden';renderFear();}
+function closeFear(){document.getElementById('fearOv').classList.remove('show');document.body.style.overflow='';}
+document.getElementById('fearOv').addEventListener('click',e=>{if(e.target.id==='fearOv')closeFear();});
+function renderFear(){
+  const body=document.getElementById('fearBody'),foot=document.getElementById('fearFoot');
+  const P=document.getElementById('fearProg');
+  if(F.step===0){
+    P.style.width='0%';
+    body.innerHTML=`<div class="pm-step">Level 2 · Reflection practice · ~3–4 minutes</div><h3>The fear map — real risk vs. anxiety</h3><p>Fear in your head always inflates into catastrophe. On screen it shrinks into a list you can work with.</p><p>Three steps: <strong>mark your fears</strong> (40 to choose from) → <strong>test each one</strong> — real risk, or anxiety inflating? → for the real ones, <strong>pick one action matched to that fear</strong>. You leave with a map and a plan.</p><div class="pm-note">Live demo — taps only, nothing is saved.</div>`;
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="closeFear()">Close</button><button class="pm-btn primary" onclick="F.step=1;renderFear()">Start →</button>`;
+    return;
+  }
+  if(F.step===1){
+    P.style.width='15%';
+    body.innerHTML=`<div class="pm-step">Step 1 of 3 · Selected: ${F.sel.length}</div><div class="pm-q" style="min-height:auto;margin-bottom:6px">Which fears live in you right now?</div><p style="margin-top:0;font-size:13.5px;color:var(--muted)">Mark as many as respond — selected ones turn green.</p><div class="pm-choices">${FEAR_ITEMS.map((s,i)=>`<div class="pm-choice ${F.sel.includes(i)?'sel':''}" data-i="${i}">${s[0]}</div>`).join('')}</div>`;
+    body.querySelectorAll('.pm-choice').forEach(el=>el.onclick=()=>{const i=+el.dataset.i;const k=F.sel.indexOf(i);k>=0?F.sel.splice(k,1):F.sel.push(i);renderFear();});
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="F.step=0;renderFear()">← Back</button><button class="pm-btn primary" ${F.sel.length?'':'disabled style="opacity:.4;pointer-events:none"'} onclick="F.step=2;F.idx=0;renderFear()">Test them →</button>`;
+    return;
+  }
+  if(F.step===2){
+    if(F.idx>=F.sel.length){F.step=3;F.idx=0;renderFear();return;}
+    P.style.width=(15+F.idx/F.sel.length*45)+'%';
+    const fi=F.sel[F.idx];
+    body.innerHTML=`<div class="pm-step">Step 2 of 3 · Fear ${F.idx+1} of ${F.sel.length}</div><div class="pm-q" style="min-height:110px;display:flex;align-items:center;font-size:20px">“${FEAR_ITEMS[fi][0]}”</div><p style="font-size:13px;color:var(--muted)">A <strong>real risk</strong> has a concrete, likely consequence you can name. <strong>Anxiety inflates</strong>: it speaks in “always”, “never”, “everyone”, catastrophes.</p>`;
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="if(F.idx>0){F.idx--;}else{F.step=1;}renderFear()">← Back</button><span style="display:flex;gap:8px"><button class="pm-btn ghost" onclick="F.sort[${fi}]='anx';F.idx++;renderFear()">🌫️ Anxiety inflating</button><button class="pm-btn primary" onclick="F.sort[${fi}]='real';F.idx++;renderFear()">⚠️ Real risk</button></span>`;
+    return;
+  }
+  if(F.step===3){
+    const reals=F.sel.filter(i=>F.sort[i]==='real');
+    if(!reals.length||F.idx>=reals.length){F.step=4;renderFear();return;}
+    P.style.width=(60+F.idx/reals.length*35)+'%';
+    const fi=reals[F.idx];
+    const opts=fearOpts(fi);
+    body.innerHTML=`<div class="pm-step">Step 3 of 3 · Real risk ${F.idx+1} of ${reals.length}</div><div class="pm-q" style="min-height:auto;margin-bottom:8px">“${FEAR_ITEMS[fi][0]}”</div><p style="font-size:13px;color:var(--muted);margin-top:0">Actions below are matched to this fear. Pick one:</p><div class="pm-choices">${opts.map((s,k)=>`<div class="pm-choice ${F.pick[fi]===k?'sel':''}" data-k="${k}">${s}</div>`).join('')}</div>`;
+    body.querySelectorAll('.pm-choice').forEach(el=>el.onclick=()=>{F.pick[fi]=+el.dataset.k;setTimeout(()=>{F.idx++;renderFear();},160);});
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="if(F.idx>0){F.idx--;}else{F.step=2;F.idx=F.sel.length-1;}renderFear()">← Back</button><span style="font-size:12px;color:var(--muted)">Tap an action to continue</span>`;
+    return;
+  }
+  P.style.width='100%';
+  const reals=F.sel.filter(i=>F.sort[i]==='real'), anx=F.sel.filter(i=>F.sort[i]==='anx');
+  let ratio;
+  if(anx.length>reals.length) ratio="<b>Most of what scares you inflated under the microscope.</b> That's not weakness — a nervous system in transition amplifies everything. You've just deflated it by testing it, and deflated fear loses its grip.";
+  else if(reals.length>anx.length) ratio="<b>Most of your fears turned out grounded.</b> That's actually good news: grounded fears are the workable kind — and each of yours has just been converted into a step.";
+  else ratio="<b>Half grounded, half inflated — a clear-eyed picture.</b> You now know which half deserves planning and which half deserves breathing.";
+  const tc={};F.sel.forEach(i=>{const t=FEAR_ITEMS[i][1];tc[t]=(tc[t]||0)+1;});
+  const themes=Object.keys(tc).sort((a,b)=>tc[b]-tc[a]).slice(0,2);
+  const themePara=themes.map(t=>`<b>The shape of your fear.</b> ${FEAR_THEMES[t]}`).join('<br><br>');
+  const plan=reals.map(i=>`<li>“${FEAR_ITEMS[i][0]}” → <strong>${F.pick[i]!=null?fearOpts(i)[F.pick[i]]:'step to choose'}</strong></li>`).join('');
+  body.innerHTML=`<div class="pm-step">Result · your map and your plan</div><h3>Fear is now a list, not a cloud</h3><div class="pm-note">${ratio}</div>${themes.length?`<div class="pm-note" style="margin-top:10px">${themePara}</div>`:''}${plan?`<p style="margin:12px 0 4px"><b>Your next moves</b> — one per real risk:</p><ul class="flist">${plan}</ul>`:'<p style="margin-top:12px">No real risks on your map today — what felt like danger was anxiety wearing a costume. Let it breathe.</p>'}<p style="font-size:12.5px;color:var(--muted);margin-top:10px">In the app: the map and steps are saved to the practice card; steps can become gentle reminders. The anxiety pile is revisited a week later — most of it will have quietly shrunk.</p>`;
+  foot.innerHTML=`<button class="pm-btn ghost" onclick="F={step:1,idx:0,sel:[],sort:{},pick:{}};renderFear()">↺ Restart</button><button class="pm-btn primary" onclick="closeFear()">Done</button>`;
+}
+
+/* ===================== ACHIEVEMENT BANK DEMO ===================== */
+const ACH_CH=[["Results and outcomes","what you built and moved"],["Strength and resilience","where you held when it was hard"],["Human impact","what changed for people because of you"],["Identity and growth","what your work says about who you are"]];
+const ACH_PROMPTS=[
+ ["What is your biggest professional achievement in the last 5 years?",0],
+ ["What result did you create that made a real difference?",0],
+ ["What project, initiative, or task are you most proud of?",0],
+ ["What did you improve, simplify, fix, or make better?",0],
+ ["What goal did you reach that once felt difficult or far away?",0],
+ ["What difficult situation did you manage better than expected?",1],
+ ["When did you continue even though things felt uncertain?",1],
+ ["What setback did you recover from?",1],
+ ["When did you stay calm, professional, or resourceful under pressure?",1],
+ ["What challenge taught you that you are stronger than you thought?",1],
+ ["How have you helped other people succeed?",2],
+ ["When did you support a team, client, colleague, or manager in an important way?",2],
+ ["What feedback have you received that you still remember?",2],
+ ["When did your presence make a situation easier, calmer, or better?",2],
+ ["What relationships or trust have you built through your work?",2],
+ ["What have you learned about yourself through your work?",3],
+ ["What skill have you developed that you did not have before?",3],
+ ["What achievement reflects the kind of professional you truly are?",3],
+ ["What are you now able to do that once intimidated you?",3],
+ ["Which achievement best proves that you are capable of more than you sometimes believe?",3]
+];
+const ACH_CATINS=["Your proof lives in <b>results</b> — you move things. When confidence wobbles, look at outcomes: they don't argue.","Your proof lives in <b>resilience</b> — you hold when it's hard. A career that survived storms carries a transferable superpower.","Your proof lives in <b>human impact</b> — people and rooms get better around you. That kind of value follows you anywhere.","Your proof lives in <b>growth</b> — you keep becoming. The next chapter is the same muscle, used on purpose."];
+const ACH_STR=["leadership","empathy","structure","resilience","creativity","communication","analysis","patience","courage","adaptability","learning speed","reliability"];
+const ACH_IDENT=["I can lead people through change with clarity and care","I hold things together when it gets hard","I turn chaos into order","I keep learning — fear doesn't stop me","I make people around me better","I recover — setbacks don't define me","I speak up when it matters","I adapt without losing myself"];
+const ACH_FIELDS=[
+ {k:"title",label:"Title — what happened?",ph:"e.g. Led a difficult transition project"},
+ {k:"sit",label:"Situation — where and when was this? What was going on around you?",ph:"e.g. Team morale was low during a major reorganization"},
+ {k:"did",label:"What I did — your actions",ph:"e.g. Created clear communication, listened to concerns, and aligned stakeholders"},
+ {k:"res",label:"Result — what changed?",ph:"e.g. Team stayed engaged and the project moved forward smoothly"},
+ {k:"str",label:"Strengths used — tap up to 4",chips:true},
+ {k:"why",label:"Why it matters to me — the emotional meaning",ph:"e.g. I helped people feel safe during uncertainty"},
+ {k:"ident",label:"What this says about me — an identity statement",ph:"Write your own — or tap one below to use it",ident:true}
+];
+let A={step:0,idx:0,marked:{},top:[],cardIdx:0,fieldIdx:0,cards:[]};
+function openAch(){A={step:0,idx:0,chIntro:null,marked:{},top:[],cardIdx:0,fieldIdx:0,cards:[]};document.getElementById('achOv').classList.add('show');document.body.style.overflow='hidden';renderAch();}
+function closeAch(){document.getElementById('achOv').classList.remove('show');document.body.style.overflow='';}
+document.getElementById('achOv').addEventListener('click',e=>{if(e.target.id==='achOv')closeAch();});
+function achCard(){return A.cards[A.cardIdx];}
+function achReadAll(){const c=achCard();[['ach_title','title'],['ach_sit','sit'],['ach_did','did'],['ach_res','res'],['ach_why','why'],['ach_ident','ident']].forEach(p=>{const el=document.getElementById(p[0]);if(el)c[p[1]]=el.value;});}
+function renderAch(){
+  const body=document.getElementById('achBody'),foot=document.getElementById('achFoot');
+  const P=document.getElementById('achProg');
+  if(A.step===0){
+    P.style.width='0%';
+    body.innerHTML=`<div class="pm-step">Level 2 · Action practice · deep work, ~20–25 minutes</div><h3>Achievement Bank</h3><p>When confidence is low, we forget what we have already done well. This practice collects real proof of your strengths, progress and value.</p><div class="pm-note"><b>Reframe first.</b> An achievement is not only a promotion or a big project. It can also be: surviving a hard period · setting a boundary · learning a new skill · helping someone · finishing something difficult · rebuilding after burnout · speaking up · staying consistent · making a brave decision · adapting to change.</div><p style="font-size:13px;color:var(--muted);margin-top:10px"><b>This is deep work — take your time.</b> One card done well is worth more than three done fast. Twenty prompts in four chapters — results, resilience, human impact, identity — to collect moments, then a structured card for each of your top three.</p>`;
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="closeAch()">Close</button><button class="pm-btn primary" onclick="A.step=1;A.idx=0;renderAch()">Start →</button>`;
+    return;
+  }
+  if(A.step===1){
+    if(A.idx>=ACH_PROMPTS.length){A.step=2;renderAch();return;}
+    P.style.width=(A.idx/ACH_PROMPTS.length*30)+'%';
+    const ch=ACH_PROMPTS[A.idx][1];
+    if(A.chIntro!==ch){
+      body.innerHTML=`<div class="pm-step">Chapter ${'ABCD'[ch]} of D</div><h3>${ACH_CH[ch][0]}</h3><p style="font-size:15px;color:var(--muted)">${ACH_CH[ch][1].charAt(0).toUpperCase()+ACH_CH[ch][1].slice(1)}. Five prompts — mark the ones where a moment comes to mind.</p>`;
+      foot.innerHTML=`<button class="pm-btn ghost" onclick="A.idx=Math.max(0,A.idx-1);A.chIntro=ACH_PROMPTS[Math.max(0,A.idx)][1];renderAch()">← Back</button><span style="display:flex;gap:8px"><button class="pm-btn ghost" onclick="A.chIntro=null;A.idx+=5;renderAch()">Skip this chapter</button><button class="pm-btn primary" onclick="A.chIntro=${ch};renderAch()">Start →</button></span>`;
+      return;
+    }
+    const inCh=A.idx%5;
+    body.innerHTML=`<div class="pm-step">${'ABCD'[ch]} · ${ACH_CH[ch][0]} · prompt ${inCh+1} of 5</div><div class="pm-q" style="min-height:100px;display:flex;align-items:center;font-size:20px">${ACH_PROMPTS[A.idx][0]}</div><input id="achName" placeholder="Name the moment in a few words — optional" value="${(A.marked[A.idx]||'').replace(/"/g,'&quot;')}" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #D8DED6;border-radius:10px;font:inherit;font-size:14px;margin:2px 0 10px;background:#FFFDF9">`;
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="if(A.idx>0){A.idx--;A.chIntro=ACH_PROMPTS[A.idx][1];}else{A.step=0;}renderAch()">← Back</button><span style="display:flex;gap:8px"><button class="pm-btn ghost" onclick="delete A.marked[A.idx];A.idx++;if(A.idx<ACH_PROMPTS.length&&ACH_PROMPTS[A.idx][1]!==${ch})A.chIntro=null;renderAch()">Nothing comes up — skip</button><button class="pm-btn primary" onclick="A.marked[A.idx]=document.getElementById('achName').value||ACH_PROMPTS[A.idx][0];A.idx++;if(A.idx<ACH_PROMPTS.length&&ACH_PROMPTS[A.idx][1]!==${ch})A.chIntro=null;renderAch()">I have one ✓</button></span>`;
+    return;
+  }
+  if(A.step===2){
+    const keys=Object.keys(A.marked);
+    if(!keys.length){A.step=1;A.idx=0;renderAch();return;}
+    P.style.width='32%';
+    body.innerHTML=`<div class="pm-step">Select your top ${Math.min(3,keys.length)}</div><div class="pm-q" style="min-height:auto;margin-bottom:6px">Which matter most to you right now?</div><p style="margin-top:0;font-size:13.5px;color:var(--muted)">Which makes you feel most capable? Which best represents who you are? You will build a full card for each.</p><div class="pm-choices">${keys.map(k=>`<div class="pm-choice ${A.top.includes(k)?'sel':''}" data-k="${k}">${A.marked[k]}</div>`).join('')}</div>`;
+    body.querySelectorAll('.pm-choice').forEach(el=>el.onclick=()=>{const k=el.dataset.k;const i=A.top.indexOf(k);if(i>=0)A.top.splice(i,1);else if(A.top.length<3)A.top.push(k);renderAch();});
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="A.step=1;A.idx=ACH_PROMPTS.length-1;renderAch()">← Back</button><button class="pm-btn primary" ${A.top.length?'':'disabled style="opacity:.4;pointer-events:none"'} onclick="A.cards=A.top.map(k=>({title:A.marked[k],str:[],ident:''}));A.cardIdx=0;A.fieldIdx=0;A.step=3;renderAch()">Build card 1 →</button>`;
+    return;
+  }
+  if(A.step===3){
+    const c=achCard();
+    P.style.width=(35+(A.cardIdx/A.top.length)*60)+'%';
+    const ta=(id,label,ph,val,rows)=>`<b style="font-size:12.5px">${label}</b><textarea id="${id}" rows="${rows||2}" placeholder="${ph}" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #D8DED6;border-radius:10px;font:inherit;font-size:14px;background:#FFFDF9;resize:vertical;margin:3px 0 10px">${val||''}</textarea>`;
+    body.innerHTML=`<div class="pm-step">Achievement Card ${A.cardIdx+1} of ${A.top.length} · one card, seven fields</div>
+      <div style="border:1.5px solid var(--green-d);border-radius:14px;padding:14px 16px;background:#FDFBF6">
+        <div style="font-size:11px;letter-spacing:.6px;color:var(--muted);text-transform:uppercase;margin-bottom:10px">Your moment: “${A.marked[A.top[A.cardIdx]]}”</div>
+        ${ta('ach_title','Title — what happened?','e.g. Led a difficult transition project',c.title)}
+        ${ta('ach_sit','Situation — where and when? What was going on around you?','e.g. Team morale was low during a major reorganization',c.sit)}
+        ${ta('ach_did','What I did — your actions','e.g. Created clear communication, listened to concerns, aligned stakeholders',c.did)}
+        ${ta('ach_res','Result — what changed?','e.g. Team stayed engaged and the project moved forward smoothly',c.res)}
+        <b style="font-size:12.5px">Strengths used — tap up to 4</b>
+        <div style="display:flex;flex-wrap:wrap;gap:7px;margin:6px 0 12px">${ACH_STR.map((s,i)=>`<div class="pm-choice str-chip ${c.str.includes(i)?'sel':''}" data-i="${i}" style="flex:0 0 auto;padding:8px 13px;font-size:13px">${s}</div>`).join('')}</div>
+        ${ta('ach_why','Why it matters to me — the emotional meaning','e.g. I helped people feel safe during uncertainty',c.why)}
+        ${ta('ach_ident','What this says about me — an identity statement','Write your own — or tap a ready one below',c.ident)}
+        <div style="display:flex;flex-wrap:wrap;gap:7px">${ACH_IDENT.map((s,i)=>`<div class="pm-choice id-chip" data-i="${i}" style="flex:0 0 auto;padding:8px 13px;font-size:12.5px">${s}</div>`).join('')}</div>
+      </div>
+      <p style="font-size:12px;color:var(--muted);margin-top:8px">A sentence or two per field is perfect — specific beats polished. In the app the card autosaves; you can return later.</p>`;
+    body.querySelectorAll('.str-chip').forEach(el=>el.onclick=()=>{achReadAll();const i=+el.dataset.i;const p=c.str.indexOf(i);if(p>=0)c.str.splice(p,1);else if(c.str.length<4)c.str.push(i);renderAch();});
+    body.querySelectorAll('.id-chip').forEach(el=>el.onclick=()=>{document.getElementById('ach_ident').value=ACH_IDENT[+el.dataset.i];});
+    const nextLbl=A.cardIdx<A.top.length-1?'Save card →':'Save & see result →';
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="achReadAll();if(A.cardIdx>0){A.cardIdx--;}else{A.step=2;}renderAch()">← Back</button><button class="pm-btn primary" onclick="achReadAll();if(A.cardIdx<A.top.length-1){A.step=35;renderAch();}else{A.step=4;renderAch();}">${nextLbl}</button>`;
+    return;
+  }
+  if(A.step===35){
+    P.style.width=(35+((A.cardIdx+1)*7/(A.top.length*7))*60)+'%';
+    body.innerHTML=`<div class="pm-step">Card ${A.cardIdx+1} saved ✓</div><h3>One real proof in the bank</h3><p>In the app you could pause here and return later — depth beats speed. In this demo, let's keep going.</p>`;
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="A.step=4;renderAch()">Finish with ${A.cardIdx+1} card${A.cardIdx?'s':''}</button><button class="pm-btn primary" onclick="A.cardIdx++;A.fieldIdx=0;A.step=3;renderAch()">Build card ${A.cardIdx+2} →</button>`;
+    return;
+  }
+  P.style.width='100%';
+  const built=A.cards.slice(0,A.cardIdx+1).filter(c=>c.title);
+  const line=(lbl,v)=>v?`<div style="margin-bottom:7px"><span style="font-size:11px;letter-spacing:.5px;color:var(--muted);text-transform:uppercase">${lbl}</span><br>${v}</div>`:'';
+  const cardsHtml=built.map(c=>`<div style="border:1.5px solid var(--green-d);border-radius:14px;padding:16px 18px;background:#FDFBF6;margin:10px 0">${line('Title',c.title)}${line('Situation',c.sit)}${line('What I did',c.did)}${line('Result',c.res)}${c.str.length?`<div style="margin-bottom:7px"><span style="font-size:11px;letter-spacing:.5px;color:var(--muted);text-transform:uppercase">Strengths used</span><br>${c.str.map(i=>ACH_STR[i]).join(' · ')}</div>`:''}${line('Why it matters to me',c.why)}${c.ident?`<div><span style="font-size:11px;letter-spacing:.5px;color:var(--muted);text-transform:uppercase">What this says about me</span><br><b>“${c.ident}”</b></div>`:''}</div>`).join('');
+  const allStr=[...new Set(built.flatMap(c=>c.str))].map(i=>ACH_STR[i]);
+  const catCount={};A.top.forEach(k=>{const c=ACH_PROMPTS[+k][1];catCount[c]=(catCount[c]||0)+1;});
+  const domCat=Object.keys(catCount).sort((a,b)=>catCount[b]-catCount[a])[0];
+  body.innerHTML=`<div class="pm-step">Result · saved to My Space → Achievement Bank</div><h3>This is proof, not a memory</h3>${cardsHtml}${domCat!=null?`<div class="pm-note">${ACH_CATINS[domCat]}</div>`:``}<div class="pm-note" style="margin-top:10px">These qualities are you. They weren't dismissed with the job, and they didn't expire with the change. On hard days, this bank is what you reread.</div>${allStr.length?`<p style="font-size:12.5px;color:var(--muted);margin-top:10px">Your strengths so far: <strong>${allStr.join(' · ')}</strong> — they accumulate into a strengths profile that feeds your resume and role design at Level 4.</p>`:''}`;
+  foot.innerHTML=`<button class="pm-btn ghost" onclick="openAch();">↺ Restart</button><button class="pm-btn primary" onclick="closeAch()">Done</button>`;
+}
+
+/* ===================== TED PRACTICE: PROTOTYPE YOUR NEXT MOVE ===================== */
+const PR_STUCK=[
+ ["I have to find the one perfect career","How might I explore what energises me — without deciding forever?"],
+ ["It's too late to change","How might I test a new direction in a small, low-risk way?"],
+ ["I have to figure it all out right now","How might I take one next step instead of the whole staircase?"],
+ ["I should already know what I want","How might I treat 'not knowing' as something to investigate, not fix?"],
+ ["If I try and it's not perfect, I've failed","How might I run a small experiment where failing is just data?"],
+ ["I'm too old to start something new","How might I use what I already have as a launch pad, not a limit?"],
+ ["I don't have the right skills or degree","How might I test the work before assuming I can't do it?"],
+ ["I can't afford to take any risk","How might I explore in a way that costs almost nothing?"],
+ ["Everyone else seems to have it figured out","How might I run my own experiment instead of comparing?"],
+ ["I have too many interests to choose one","How might I prototype two or three in parallel and compare?"],
+ ["What if I choose and regret it","How might I make a reversible move instead of a permanent one?"],
+ ["I don't even know what I like anymore","How might I collect small clues about what gives me energy?"],
+ ["I'd have to give up everything I built","How might I carry my strengths into something new?"],
+ ["Nobody would hire me for something different","How might I create one small piece of proof instead of asking permission?"],
+ ["I'm waiting until I feel ready","How might I act my way into clarity instead of waiting for it?"]
+];
+const PR_CURIOUS=["working with my hands","teaching or mentoring","data & analysis","building my own thing","helping people one-on-one","designing systems","creating / writing / making","leading a team","research & deep focus","working with nature/outdoors","fixing & improving things","connecting & bringing people together"];
+const PR_BLOCKS=[
+ "Talk to one person who already does this",
+ "Shadow or watch one real day of this work",
+ "Build a tiny version of it over a weekend",
+ "Take one free lesson or tutorial",
+ "Read one honest 'day in the life' account",
+ "Offer to help someone with it for free, once"
+];
+let PR={step:0,stuck:null,curious:[],ci:0,exp:{}};
+function openProto(){PR={step:0,stuck:null,curious:[],ci:0,exp:{}};document.getElementById('protoOv').classList.add('show');document.body.style.overflow='hidden';renderProto();}
+function closeProto(){document.getElementById('protoOv').classList.remove('show');document.body.style.overflow='';}
+document.getElementById('protoOv').addEventListener('click',e=>{if(e.target.id==='protoOv')closeProto();});
+function renderProto(){
+  const body=document.getElementById('protoBody'),foot=document.getElementById('protoFoot'),P=document.getElementById('protoProg');
+  if(PR.step===0){
+    P.style.width='0%';
+    body.innerHTML=`<div class="pm-step">Level 2 · TED-based additional practice · from Bill Burnett's talk · ~4 minutes</div><h3>Prototype your next move</h3><p>Designers don't wait for the one perfect idea — they turn uncertainty into small experiments. This practice takes Burnett's method and points it at your next step.</p><div class="pm-note"><b>The reframe at the heart of it:</b> you don't need to <i>decide</i> your whole future. You need to <i>prototype</i> it — try small things, notice your energy, adjust. Three steps: reframe the problem → follow curiosity → design tiny experiments.</div><p style="font-size:12.5px;color:var(--muted);margin-top:8px">Best right after watching the talk — but it works on its own too.</p>`;
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="closeProto()">Close</button><button class="pm-btn primary" onclick="PR.step=1;renderProto()">Start →</button>`;
+    return;
+  }
+  if(PR.step===1){
+    P.style.width='25%';
+    body.innerHTML=`<div class="pm-step">Step 1 of 3 · Reframe the problem</div><div class="pm-q" style="min-height:auto;margin-bottom:6px">Which stuck thought is loudest right now?</div><p style="margin-top:0;font-size:13.5px;color:var(--muted)">Fifteen common ones below — pick the one that fits (or the closest). Burnett's step: turn a dead-end 'problem' into a 'how might I…' question you can act on.</p><div class="pm-choices">${PR_STUCK.map((s,i)=>`<div class="pm-choice ${PR.stuck===i?'sel':''}" data-i="${i}">${s[0]}</div>`).join('')}</div>${PR.stuck!=null?`<div class="pm-note" style="margin-top:12px"><b>Reframed:</b> ${PR_STUCK[PR.stuck][1]}</div>`:''}`;
+    body.querySelectorAll('.pm-choice').forEach(el=>el.onclick=()=>{PR.stuck=+el.dataset.i;renderProto();});
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="PR.step=0;renderProto()">← Back</button><button class="pm-btn primary" ${PR.stuck!=null?'':'disabled style="opacity:.4;pointer-events:none"'} onclick="PR.step=2;renderProto()">Continue →</button>`;
+    return;
+  }
+  if(PR.step===2){
+    P.style.width='50%';
+    body.innerHTML=`<div class="pm-step">Step 2 of 3 · Follow curiosity</div><div class="pm-q" style="min-height:auto;margin-bottom:6px">What pulls your curiosity — no commitment required?</div><p style="margin-top:0;font-size:13.5px;color:var(--muted)">Pick 1–3. Curiosity is data, not a promise.</p><div class="pm-choices" style="display:flex;flex-wrap:wrap;gap:8px">${PR_CURIOUS.map((s,i)=>`<div class="pm-choice ${PR.curious.includes(i)?'sel':''}" data-i="${i}" style="flex:0 0 auto;padding:10px 15px">${s}</div>`).join('')}</div>`;
+    body.querySelectorAll('.pm-choice').forEach(el=>el.onclick=()=>{const i=+el.dataset.i;const k=PR.curious.indexOf(i);if(k>=0)PR.curious.splice(k,1);else if(PR.curious.length<3)PR.curious.push(i);renderProto();});
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="PR.step=1;renderProto()">← Back</button><button class="pm-btn primary" ${PR.curious.length?'':'disabled style="opacity:.4;pointer-events:none"'} onclick="PR.ci=0;PR.step=3;renderProto()">Design experiments →</button>`;
+    return;
+  }
+  if(PR.step===3){
+    if(PR.ci>=PR.curious.length){PR.step=4;renderProto();return;}
+    P.style.width=(50+PR.ci/PR.curious.length*45)+'%';
+    const cur=PR.curious[PR.ci];
+    body.innerHTML=`<div class="pm-step">Step 3 of 3 · Experiment ${PR.ci+1} of ${PR.curious.length}</div><div class="pm-q" style="min-height:auto;margin-bottom:6px">A tiny experiment for: <span style="color:var(--green-d)">${PR_CURIOUS[cur]}</span></div><p style="margin-top:0;font-size:13.5px;color:var(--muted)">Small, reversible, real. Pick one move you could do in a week:</p><div class="pm-choices">${PR_BLOCKS.map((s,k)=>`<div class="pm-choice ${PR.exp[cur]===k?'sel':''}" data-k="${k}">${s}</div>`).join('')}</div>`;
+    body.querySelectorAll('.pm-choice').forEach(el=>el.onclick=()=>{PR.exp[cur]=+el.dataset.k;setTimeout(()=>{PR.ci++;renderProto();},160);});
+    foot.innerHTML=`<button class="pm-btn ghost" onclick="if(PR.ci>0){PR.ci--;}else{PR.step=2;}renderProto()">← Back</button><span style="font-size:12px;color:var(--muted)">Tap a move to continue</span>`;
+    return;
+  }
+  P.style.width='100%';
+  const plan=PR.curious.map(c=>`<li><strong>${PR_CURIOUS[c]}</strong> → ${PR.exp[c]!=null?PR_BLOCKS[PR.exp[c]]:'—'} <span style="color:var(--muted);font-size:12px">· then ask: did it feel like energy or drain?</span></li>`).join('');
+  body.innerHTML=`<div class="pm-step">Result · your prototype plan</div><h3>You didn't decide — you designed</h3><div class="pm-note"><b>Reframed problem:</b> ${PR_STUCK[PR.stuck][1]}</div>
+    <p style="margin:12px 0 4px"><b>Your three tiny experiments</b> — small, reversible, real:</p><ul class="flist">${plan}</ul>
+    <div class="pm-note" style="margin-top:10px">This is design thinking, Burnett-style: you don't get your next chapter right on the first try — you <b>try, notice your energy, and adjust</b>. After each experiment, the only question that matters is: <i>flow or drain?</i></div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:10px">In the app: experiments are saved to <strong>My Space</strong> and become check-off items over the coming weeks. What gives you energy flows straight into your <strong>Level 4 blueprint</strong> — where these tested pieces become a real direction.</p>`;
+  foot.innerHTML=`<button class="pm-btn ghost" onclick="openProto()">↺ Restart</button><button class="pm-btn primary" onclick="closeProto()">Done</button>`;
+}
 </script>
 </body>
 </html>
